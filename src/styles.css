@@ -41,50 +41,55 @@
 
 :root {
   --radius: 1rem;
-  /* Cream paper background */
-  --background: oklch(0.974 0.012 95);
-  --foreground: oklch(0.22 0.04 150);
 
-  --card: oklch(0.985 0.008 95);
-  --card-foreground: oklch(0.22 0.04 150);
-  --popover: oklch(0.985 0.008 95);
-  --popover-foreground: oklch(0.22 0.04 150);
+  /* Warm earth background — sand/ochre tone, not cream-white */
+  --background: oklch(0.93 0.022 85);
+  --foreground: oklch(0.18 0.04 60);
 
-  /* Deep forest green */
-  --primary: oklch(0.32 0.07 155);
-  --primary-foreground: oklch(0.97 0.012 95);
+  --card: oklch(0.95 0.018 82);
+  --card-foreground: oklch(0.18 0.04 60);
+  --popover: oklch(0.95 0.018 82);
+  --popover-foreground: oklch(0.18 0.04 60);
 
-  --secondary: oklch(0.93 0.02 100);
-  --secondary-foreground: oklch(0.25 0.05 150);
+  /* Deep forest green — more saturated, earth-rooted */
+  --primary: oklch(0.28 0.09 145);
+  --primary-foreground: oklch(0.96 0.015 90);
 
-  --muted: oklch(0.93 0.018 100);
-  --muted-foreground: oklch(0.45 0.03 140);
+  --secondary: oklch(0.87 0.035 78);
+  --secondary-foreground: oklch(0.22 0.05 65);
 
-  --accent: oklch(0.78 0.16 75);
-  --accent-foreground: oklch(0.22 0.04 150);
+  --muted: oklch(0.84 0.035 75);
+  --muted-foreground: oklch(0.42 0.04 65);
 
-  --destructive: oklch(0.55 0.21 28);
-  --destructive-foreground: oklch(0.97 0.012 95);
+  /* Terracotta / burnt amber accent */
+  --accent: oklch(0.62 0.18 55);
+  --accent-foreground: oklch(0.18 0.04 60);
 
-  --border: oklch(0.88 0.02 100);
-  --input: oklch(0.88 0.02 100);
-  --ring: oklch(0.55 0.13 70);
+  --destructive: oklch(0.52 0.20 30);
+  --destructive-foreground: oklch(0.96 0.015 90);
 
-  /* Brand-specific */
-  --gold: oklch(0.78 0.16 75);
-  --gold-deep: oklch(0.66 0.17 60);
-  --clay: oklch(0.62 0.14 40);
-  --leaf: oklch(0.55 0.14 150);
-  --leaf-deep: oklch(0.32 0.07 155);
+  --border: oklch(0.80 0.04 70);
+  --input: oklch(0.80 0.04 70);
+  --ring: oklch(0.52 0.14 55);
+
+  /* Brand-specific — earth & forest palette */
+  --gold: oklch(0.70 0.17 65);
+  --gold-deep: oklch(0.58 0.18 50);
+  --clay: oklch(0.52 0.16 38);
+  --leaf: oklch(0.48 0.14 142);
+  --leaf-deep: oklch(0.26 0.09 145);
+  --terra: oklch(0.55 0.17 42);
+  --bark: oklch(0.38 0.09 62);
+  --ochre: oklch(0.65 0.16 70);
 
   --font-display: "Bricolage Grotesque", system-ui, sans-serif;
   --font-serif: "Fraunces", Georgia, serif;
   --font-sans: "Inter", system-ui, sans-serif;
 
-  --gradient-hero: linear-gradient(110deg, var(--gold-deep) 0%, var(--gold) 35%, var(--clay) 75%, var(--leaf) 100%);
-  --gradient-soft: radial-gradient(120% 90% at 80% 0%, oklch(0.92 0.09 85 / 0.7) 0%, transparent 60%),
-                   radial-gradient(80% 70% at 0% 0%, oklch(0.9 0.06 150 / 0.5) 0%, transparent 60%);
-  --shadow-elegant: 0 20px 60px -25px oklch(0.32 0.07 155 / 0.35);
+  --gradient-hero: linear-gradient(110deg, var(--gold-deep) 0%, var(--terra) 30%, var(--clay) 65%, var(--leaf) 100%);
+  --gradient-soft: radial-gradient(120% 90% at 80% 0%, oklch(0.78 0.14 55 / 0.45) 0%, transparent 55%),
+                   radial-gradient(80% 70% at 0% 0%, oklch(0.55 0.10 145 / 0.40) 0%, transparent 55%);
+  --shadow-elegant: 0 20px 60px -25px oklch(0.26 0.09 145 / 0.45);
 }
 
 @layer base {
