@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Leaf, Truck, Building2, Network, TrendingDown, Coins, Globe2, Sparkles, CheckCircle2, ArrowUpRight } from "lucide-react";
+import { ArrowRight, Leaf, Truck, Building2, Network, TrendingDown, Coins, Globe2, Sparkles, CheckCircle2, ArrowUpRight, Landmark } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -20,9 +20,6 @@ function Nav() {
           <a href="#sectores" className="hover:text-foreground transition">Sectores</a>
           <a href="#financiamiento" className="hover:text-foreground transition">Financiamiento</a>
         </nav>
-        <a href="#contacto" className="inline-flex items-center gap-1.5 rounded-full bg-primary text-primary-foreground px-4 py-2 text-sm font-medium hover:opacity-90 transition">
-          Solicitar reunión <ArrowRight className="h-3.5 w-3.5" />
-        </a>
       </div>
     </header>
   );
@@ -51,7 +48,7 @@ function Hero() {
         </h1>
 
         <p className="mt-8 max-w-2xl text-lg lg:text-xl text-muted-foreground leading-relaxed">
-          Programa provincial de transformación logística y productiva. Un sistema integrado que convierte la fragmentación en eficiencia, y la eficiencia en desarrollo económico para la provincia.
+          Programa provincial de transformación logística y productiva. Un sistema integrado que convierte la fragmentación en eficiencia, la eficiencia en desarrollo económico, y el desarrollo económico en soberanía para la provincia.
         </p>
 
         <div className="mt-10 flex flex-wrap gap-3">
@@ -95,7 +92,8 @@ function Diagnostico() {
           Un sistema logístico <span className="font-serif italic font-light text-[var(--clay)]">fragmentado.</span>
         </h2>
         <p className="mt-8 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-          Misiones cuenta con sectores productivos consolidados —yerba mate, té, foresto-industria— pero operan de manera aislada. <span className="text-foreground font-medium">El problema no es productivo ni de infraestructura física: es de organización del sistema logístico.</span>
+          Misiones cuenta con sectores productivos consolidados —yerba mate, té, foresto-industria— pero operan de manera aislada, generando ineficiencias que erosionan la competitividad.
+          <span className="text-foreground font-medium"> El problema no es productivo ni de infraestructura física: es de organización del sistema logístico.</span>
         </p>
 
         <div className="mt-16 grid md:grid-cols-3 gap-5">
@@ -120,6 +118,7 @@ function Diagnostico() {
 
 function Solucion() {
   const objs = [
+    "Fortalecer la soberanía económica y logística de la provincia",
     "Reducir costos logísticos entre 25% y 45%",
     "Incrementar la eficiencia del transporte provincial",
     "Aumentar la competitividad exportadora sectorial",
@@ -157,7 +156,7 @@ function Modelo() {
   const steps = [
     { i: Building2, t: "Empresas ingresan", d: "Productores y empresas registran sus cargas en la plataforma provincial." },
     { i: Network, t: "Municipios consolidan", d: "Los nodos municipales agregan carga por destino y volumen óptimo." },
-    { i: Sparkles, t: "Plataforma asigna", d: "Sistema digital provincial asigna transporte de forma automática." },
+    { i: Landmark, t: "Provincia coordina", d: "El Estado provincial opera la plataforma digital y coordina la asignación de transporte entre todos los nodos." },
     { i: Truck, t: "Transportistas ejecutan", d: "Flota privada opera con cargas completas y retornos optimizados." },
   ];
   return (
@@ -187,7 +186,7 @@ function Modelo() {
         </div>
 
         <p className="mt-10 max-w-3xl text-muted-foreground">
-          Este modelo transforma los parques industriales en <span className="text-foreground font-medium">centros operativos activos</span>, con municipios como gestores del nodo, el sector privado como ejecutor del transporte, y la provincia como regulador e integrador digital del sistema.
+          Este modelo transforma los parques industriales en <span className="text-foreground font-medium">centros operativos activos</span>, con municipios como gestores del nodo, el sector privado como ejecutor del transporte, y la provincia como coordinador general del sistema y administrador directo de la plataforma digital que lo integra.
         </p>
       </div>
     </section>
@@ -327,6 +326,7 @@ function Sectores() {
 
 function Plataforma() {
   const actors = [
+    { t: "Provincia", d: "Gobernanza integral del sistema, datos logísticos consolidados en tiempo real y mayor competitividad exportadora sin incrementar el gasto público." },
     { t: "Municipios", d: "Ingresos variables por operación, crecimiento proporcional al volumen y autonomía operativa." },
     { t: "Empresas", d: "Reducción directa de costos, acceso simplificado a exportación y mayor escala sin inversión propia." },
     { t: "Transportistas", d: "Mayor volumen constante, eliminación de retornos vacíos y mejor utilización de la flota disponible." },
@@ -346,7 +346,7 @@ function Plataforma() {
           ¿Por qué cada actor <span className="font-serif italic font-light">participa?</span>
         </h2>
 
-        <div className="mt-16 grid md:grid-cols-3 gap-5">
+        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-5">
           {actors.map((a) => (
             <div key={a.t} className="rounded-2xl border border-border p-7">
               <div className="flex items-center gap-3">
@@ -436,11 +436,12 @@ function Conclusion() {
           "El problema no es lo que produce Misiones, sino cómo lo organiza. Este sistema convierte <span className="text-gradient-hero not-italic font-display font-semibold">organización en desarrollo económico.</span>"
         </blockquote>
 
-        <div className="mt-16 grid lg:grid-cols-3 gap-5">
+        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {[
             { i: TrendingDown, t: "Reducción de costos logísticos", v: "25–45%" },
             { i: Coins, t: "Ingresos propios municipales", v: "Sostenibles" },
             { i: Leaf, t: "Exportaciones provinciales", v: "+ Crecimiento" },
+            { i: Truck, t: "Eficiencia del transporte privado", v: "Optimizada" },
           ].map((x) => (
             <div key={x.t} className="rounded-2xl border border-border bg-card p-7">
               <x.i className="h-6 w-6 text-[var(--leaf)]" />
@@ -459,12 +460,12 @@ function Conclusion() {
             <p className="mt-6 text-lg text-primary-foreground/80 leading-relaxed">
               No proponemos un aumento del gasto público. Proponemos transformar las ineficiencias logísticas existentes en un sistema económico organizado — con reglas claras, incentivos alineados y tecnología como soporte.
             </p>
+            <p className="mt-5 text-lg text-primary-foreground/80 leading-relaxed">
+              En el fondo, este programa responde a una idea más amplia: la <span className="text-[var(--gold)] font-semibold">soberanía económica de Misiones</span>. Una provincia que coordina su propia logística, administra sus propios datos productivos y capta más valor de lo que produce, depende menos de decisiones y transferencias externas para sostener su desarrollo. La Red de Nodos Logísticos no es solo una mejora operativa — es la infraestructura que le permite a Misiones decidir sobre su propio futuro económico.
+            </p>
             <div className="mt-10 flex flex-wrap gap-3">
-              <a href="mailto:contacto@nodos.misiones.gob.ar" className="inline-flex items-center gap-2 rounded-full bg-[var(--gold)] text-[var(--leaf-deep)] px-6 py-3.5 text-sm font-semibold hover:opacity-90 transition">
-                Solicitar presentación oficial <ArrowUpRight className="h-4 w-4" />
-              </a>
-              <a href="#top" className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 px-6 py-3.5 text-sm font-medium hover:bg-primary-foreground/10 transition">
-                Volver al inicio
+              <a href="#top" className="inline-flex items-center gap-2 rounded-full bg-[var(--gold)] text-[var(--leaf-deep)] px-6 py-3.5 text-sm font-semibold hover:opacity-90 transition">
+                Volver al inicio <ArrowUpRight className="h-4 w-4" />
               </a>
             </div>
           </div>
