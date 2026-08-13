@@ -40,7 +40,7 @@ function Hero() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 backdrop-blur px-4 py-1.5 text-xs font-medium">
           <span className="h-1.5 w-1.5 rounded-full bg-[var(--gold-deep)] animate-pulse" />
-          Política Pública · Inversión Productiva · Exportación
+          Política Pública · Infraestructura Económica Territorial · Exportación
         </div>
 
         <h1 className="mt-8 font-display font-bold leading-[0.92] tracking-tight text-[clamp(2.75rem,8vw,7rem)]">
@@ -49,7 +49,7 @@ function Hero() {
         </h1>
 
         <p className="mt-8 max-w-2xl text-lg lg:text-xl text-muted-foreground leading-relaxed">
-          Programa provincial de transformación logística y productiva. Un sistema integrado que convierte la fragmentación en eficiencia, la eficiencia en desarrollo económico, y el desarrollo económico en soberanía para la provincia.
+          Programa provincial de transformación logística y productiva. Un sistema integrado que coordina carga, almacenamiento, subproductos y capacidad ociosa — y convierte la fragmentación en eficiencia, la eficiencia en desarrollo económico, y el desarrollo económico en soberanía para la provincia.
         </p>
 
         <div className="mt-10 flex flex-wrap gap-3">
@@ -61,15 +61,16 @@ function Hero() {
           </a>
         </div>
 
-        <div className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-px bg-border rounded-2xl overflow-hidden border border-border shadow-sm">
+        <div className="mt-20 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-px bg-border rounded-2xl overflow-hidden border border-border shadow-sm">
           {[
             { v: "25–45%", l: "Reducción de costos logísticos" },
             { v: "0", l: "Aumento de gasto público" },
+            { v: "7", l: "Módulos del sistema productivo" },
             { v: "4", l: "Actores en cadena coordinada" },
             { v: "100%", l: "Trazabilidad digital" },
-          ].map((s) => (
+          ].map((s, i) => (
             <div key={s.l} className="bg-card p-6 lg:p-8">
-              <div className="font-display text-3xl lg:text-5xl font-bold text-gradient-hero">{s.v}</div>
+              <div className={`font-display font-bold text-gradient-hero whitespace-nowrap ${i === 0 ? "text-2xl lg:text-4xl" : "text-3xl lg:text-5xl"}`}>{s.v}</div>
               <div className="mt-2 text-xs lg:text-sm text-muted-foreground">{s.l}</div>
             </div>
           ))}
