@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Leaf, Truck, Building2, Network, TrendingDown, Coins, Globe2, Sparkles, CheckCircle2, ArrowUpRight, Landmark } from "lucide-react";
+import { ArrowRight, Leaf, Truck, Building2, Network, TrendingDown, Coins, Globe2, Sparkles, CheckCircle2, ArrowUpRight, Landmark, Warehouse, Recycle, Factory, Gauge, BarChart3, Percent } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -18,6 +18,7 @@ function Nav() {
           <a href="#modelo" className="hover:text-foreground transition">Modelo</a>
           <a href="#impacto" className="hover:text-foreground transition">Impacto</a>
           <a href="#sectores" className="hover:text-foreground transition">Sectores</a>
+          <a href="#red-productiva" className="hover:text-foreground transition">Red Productiva</a>
           <a href="#financiamiento" className="hover:text-foreground transition">Financiamiento</a>
         </nav>
       </div>
@@ -388,6 +389,245 @@ function Plataforma() {
   );
 }
 
+function RedProductiva() {
+  const modules = [
+    { icon: Truck, t: "Logística", d: "Cargas, consolidación, transporte y rutas óptimas." },
+    { icon: Warehouse, t: "Almacenamiento", d: "Depósitos municipales y capacidad privada en red." },
+    { icon: Recycle, t: "Subproductos", d: "Oferta, demanda y valorización de excedentes industriales." },
+    { icon: Factory, t: "Capacidad productiva", d: "Maquinaria, instalaciones y capacidad ociosa disponible." },
+    { icon: Globe2, t: "Exportación", d: "Despachantes, documentación y logística de frontera." },
+    { icon: BarChart3, t: "Inteligencia económica", d: "Movimientos, volúmenes, costos y cadenas productivas." },
+    { icon: Gauge, t: "Valor territorial", d: "Trazabilidad, origen y captura de valor agregado local." },
+  ];
+  return (
+    <section id="red-productiva" className="py-28 lg:py-36 border-t border-border">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <SectionLabel>08 — Más allá de la logística</SectionLabel>
+        <h2 className="font-display text-4xl lg:text-6xl font-semibold leading-[1.05] max-w-4xl">
+          El nodo se convierte en <span className="font-serif italic font-light text-[var(--clay)]">infraestructura económica territorial.</span>
+        </h2>
+        <p className="mt-8 max-w-2xl text-lg text-muted-foreground leading-relaxed">
+          El nodo municipal ya no solo recibe, almacena y despacha cargas: es el punto donde se encuentran carga, almacenamiento, transporte, subproductos, servicios y capacidad productiva.
+          <span className="text-foreground font-medium"> Antes, nodo era depósito más camiones. Ahora, es un sistema de siete módulos.</span>
+        </p>
+
+        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border rounded-3xl overflow-hidden border border-border">
+          {modules.map((m, i) => (
+            <div key={m.t} className="bg-card p-7 group">
+              <div className="flex items-center justify-between">
+                <div className="h-11 w-11 rounded-xl bg-primary/5 grid place-items-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition">
+                  <m.icon className="h-5 w-5" />
+                </div>
+                <span className="font-serif text-2xl text-[var(--gold-deep)]">0{i+1}</span>
+              </div>
+              <h3 className="mt-6 font-display text-base font-semibold">{m.t}</h3>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{m.d}</p>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-10 max-w-3xl text-muted-foreground">
+          El programa establece la Red Provincial de Nodos Logísticos y Productivos, con sus principios, competencias y régimen económico. Cada módulo se define y actualiza a nivel operativo — <span className="text-foreground font-medium">así el marco general permanece estable mientras la plataforma evoluciona tecnológicamente.</span>
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function Almacenamiento() {
+  const details = [
+    { l: "Superficie", v: "1.000 m²" },
+    { l: "Ubicación", v: "Municipio X" },
+    { l: "Disponibilidad", v: "180 días" },
+    { l: "Altura", v: "8 m" },
+    { l: "Seguridad", v: "24 horas" },
+    { l: "Capacidad", v: "X toneladas" },
+  ];
+  const tiers = [
+    { e: "Empresa propietaria", v: "94–96%" },
+    { e: "Municipio / nodo", v: "3–5%" },
+    { e: "Provincia", v: "0,3–0,4%" },
+  ];
+  return (
+    <section className="py-28 lg:py-36 border-t border-border bg-card/40">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <SectionLabel>09 — Registro Provincial de Almacenamiento</SectionLabel>
+        <h2 className="font-display text-4xl lg:text-6xl font-semibold leading-[1.05] max-w-4xl">
+          La capacidad privada que ya existe, <span className="font-serif italic font-light">puesta en red.</span>
+        </h2>
+        <p className="mt-8 max-w-2xl text-lg text-muted-foreground leading-relaxed">
+          En lugar de construir depósitos públicos, la Provincia registra la capacidad ociosa del sector privado —galpones, cámaras frigoríficas, silos, centros de distribución, espacios en parques industriales— y la pone a disposición de quien la necesita. El nodo coordina la operación; no compite con el mercado.
+        </p>
+
+        <div className="mt-16 grid lg:grid-cols-2 gap-6">
+          <div className="rounded-3xl border border-border bg-card p-8 lg:p-10">
+            <div className="flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-[var(--gold-deep)]">
+              <Warehouse className="h-3.5 w-3.5" /> Ejemplo de publicación
+            </div>
+            <p className="mt-5 text-muted-foreground">Una empresa con un galpón de 2.000 m² usa solo la mitad durante seis meses. Publica el resto en la red:</p>
+            <div className="mt-6 grid grid-cols-2 gap-4">
+              {details.map((d) => (
+                <div key={d.l} className="rounded-xl bg-muted/50 p-4">
+                  <div className="text-xs text-muted-foreground">{d.l}</div>
+                  <div className="mt-1 font-display text-lg font-semibold">{d.v}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-3xl border border-border bg-card p-8 lg:p-10">
+            <div className="text-xs font-medium tracking-widest uppercase text-muted-foreground">Distribución de la comisión</div>
+            <p className="mt-5 text-muted-foreground">Sin gasto municipal: el ingreso surge de organizar un mercado que hoy está fragmentado.</p>
+            <div className="mt-6 space-y-4">
+              {tiers.map((t) => (
+                <div key={t.e} className="flex justify-between items-baseline border-b border-border pb-3 last:border-0">
+                  <span className="text-sm text-muted-foreground">{t.e}</span>
+                  <span className="font-display text-2xl font-bold">{t.v}</span>
+                </div>
+              ))}
+            </div>
+            <p className="mt-6 text-sm text-muted-foreground">La comisión es decreciente según volumen y duración del contrato.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Subproductos() {
+  const flow = ["Empresa A genera el subproducto", "Nodo lo registra y recibe", "Plataforma publica en la Bolsa", "Empresa B lo compra", "Transportista lo traslada", "Municipio interviene como nodo", "Provincia registra la operación"];
+  const sectores = [
+    { t: "Forestal", items: "aserrín · corteza · chips · costaneros · viruta" },
+    { t: "Yerba", items: "residuos de procesamiento · biomasa" },
+    { t: "Té", items: "descartes · biomasa · residuos orgánicos" },
+    { t: "Agroindustria", items: "cáscaras · semillas · fibras · residuos orgánicos" },
+    { t: "Industria", items: "pallets · embalajes · metales · plásticos · cartón" },
+  ];
+  return (
+    <section className="py-28 lg:py-36 border-t border-border">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <SectionLabel>10 — Bolsa Provincial de Subproductos</SectionLabel>
+        <h2 className="font-display text-4xl lg:text-6xl font-semibold leading-[1.05] max-w-4xl">
+          Lo que a una empresa le cuesta descartar, <span className="font-serif italic font-light">otra lo necesita como insumo.</span>
+        </h2>
+        <p className="mt-8 max-w-2xl text-lg text-muted-foreground leading-relaxed">
+          La plataforma registra subproductos, residuos y excedentes industriales —y los trata no como residuo, sino como recurso productivo potencialmente comercializable. Un aserradero genera aserrín, corteza y chips; otra empresa los necesita como biomasa, insumo para pellets o tableros. La plataforma encuentra la coincidencia.
+        </p>
+
+        <div className="mt-16 flex flex-wrap items-center gap-3">
+          {flow.map((f, i) => (
+            <div key={f} className="flex items-center gap-3">
+              <div className="rounded-full border border-border bg-card px-4 py-2 text-xs font-medium max-w-[11rem]">{f}</div>
+              {i < flow.length - 1 && <ArrowRight className="h-4 w-4 text-muted-foreground shrink-0" />}
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+          {sectores.map((s) => (
+            <div key={s.t} className="rounded-2xl border border-border bg-card p-6 hover:shadow-[var(--shadow-elegant)] transition">
+              <Recycle className="h-5 w-5 text-[var(--leaf)] mb-4" />
+              <h3 className="font-display text-lg font-semibold">{s.t}</h3>
+              <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{s.items}</p>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-10 max-w-3xl text-muted-foreground">
+          El nodo no solo mueve productos terminados: también <span className="text-foreground font-medium">consolida, almacena y despacha materias primas secundarias</span>, generando actividad económica adicional dentro de los parques industriales.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function CapacidadOciosa() {
+  const items = ["Cámaras de frío", "Secaderos", "Aserraderos", "Maquinaria", "Autoelevadores", "Laboratorios", "Talleres", "CNC", "Líneas de producción", "Plantas de procesamiento"];
+  return (
+    <section className="py-28 lg:py-36 border-t border-border bg-card/40">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-12 gap-12">
+        <div className="lg:col-span-5">
+          <SectionLabel>11 — Capacidad Productiva Ociosa</SectionLabel>
+          <h2 className="font-display text-4xl lg:text-5xl font-semibold leading-[1.05]">
+            La infraestructura instalada,<br/><span className="text-gradient-hero">produciendo más</span> sin nueva inversión.
+          </h2>
+          <p className="mt-8 text-muted-foreground leading-relaxed">
+            No solo depósitos: la plataforma permite registrar horas o capacidad disponible de maquinaria e instalaciones industriales. Una línea que trabaja 8 horas y tiene 4 libres puede publicarlas; otra empresa las contrata. El municipio cobra por la intermediación y la provincia, su pequeño porcentaje.
+          </p>
+        </div>
+        <div className="lg:col-span-7">
+          <div className="rounded-3xl border border-border bg-card p-8 lg:p-10">
+            <div className="flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-[var(--gold-deep)]">
+              <Factory className="h-3.5 w-3.5" /> Qué puede publicarse
+            </div>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {items.map((it) => (
+                <span key={it} className="rounded-full border border-border bg-muted/50 px-4 py-2 text-sm">{it}</span>
+              ))}
+            </div>
+          </div>
+          <div className="mt-6 rounded-2xl border-l-4 border-[var(--clay)] bg-[var(--clay)]/5 p-7">
+            <p className="text-foreground">
+              Ejemplo: una industria con una línea de producción que trabaja 8 horas diarias publica <span className="font-semibold">4 horas/día</span> de capacidad disponible. Otra empresa las contrata sin necesidad de invertir en una planta propia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ICVT() {
+  const ejemplos = [
+    { v: "25%", t: "IVAP bajo", d: "Bajo valor agregado provincial." },
+    { v: "60%", t: "IVAP medio", d: "Buen nivel de captura de valor." },
+    { v: "85%", t: "IVAP alto", d: "Altísimo impacto económico local." },
+  ];
+  const dimensiones = ["Valor agregado local", "Empleo local", "Proveedores locales", "Servicios locales", "Logística local", "Transformación en Misiones", "Uso de infraestructura provincial", "Innovación local"];
+  return (
+    <section className="py-28 lg:py-36 border-t border-border">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <SectionLabel>12 — Índice de Captura de Valor Territorial</SectionLabel>
+        <h2 className="font-display text-4xl lg:text-6xl font-semibold leading-[1.05] max-w-4xl">
+          Medir cuánto valor de lo que se produce <span className="font-serif italic font-light">realmente queda en Misiones.</span>
+        </h2>
+        <p className="mt-8 max-w-2xl text-lg text-muted-foreground leading-relaxed">
+          La plataforma puede estimar qué porción del valor económico de una operación —insumos, mano de obra, servicios, transporte, transformación, proveedores— se genera dentro de la provincia. Una empresa puede fabricar en Misiones pero comprar todo afuera: el índice contempla varias dimensiones, no solo el porcentaje de venta.
+        </p>
+
+        <div className="mt-16 grid md:grid-cols-3 gap-5">
+          {ejemplos.map((e) => (
+            <div key={e.v} className="rounded-3xl border border-border bg-card p-8">
+              <Gauge className="h-6 w-6 text-[var(--leaf)] mb-6" />
+              <div className="font-display text-4xl font-bold text-gradient-hero">{e.v}</div>
+              <div className="mt-3 text-sm font-medium text-foreground">{e.t}</div>
+              <div className="mt-1 text-sm text-muted-foreground">{e.d}</div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 grid lg:grid-cols-2 gap-6">
+          <div className="rounded-2xl border border-border bg-card p-7">
+            <div className="flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-muted-foreground">
+              <Percent className="h-3.5 w-3.5" /> Dimensiones del índice
+            </div>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {dimensiones.map((d) => (
+                <span key={d} className="rounded-full border border-border bg-muted/50 px-3.5 py-1.5 text-xs">{d}</span>
+              ))}
+            </div>
+          </div>
+          <div className="rounded-2xl border-l-4 border-[var(--gold-deep)] bg-[var(--gold)]/5 p-7">
+            <p className="font-serif italic text-lg lg:text-xl text-foreground leading-snug">
+              "Los beneficios se asignan de acuerdo con el Índice de Captura de Valor Territorial" — en lugar de un criterio vago, una regla objetiva y medible para la política de industrialización estratégica de la provincia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Internacional() {
   const orgs = [
     { n: "BID", d: "Banco Interamericano de Desarrollo" },
@@ -398,7 +638,7 @@ function Internacional() {
   return (
     <section id="financiamiento" className="py-28 lg:py-36 border-t border-border bg-card/40">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <SectionLabel>08 — Financiamiento internacional</SectionLabel>
+        <SectionLabel>13 — Financiamiento internacional</SectionLabel>
         <h2 className="font-display text-4xl lg:text-6xl font-semibold leading-[1.05] max-w-4xl">
           Elegible para los principales <span className="font-serif italic font-light">organismos multilaterales.</span>
         </h2>
@@ -431,7 +671,7 @@ function Conclusion() {
   return (
     <section id="contacto" className="py-28 lg:py-40 border-t border-border bg-grain relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-10 relative">
-        <SectionLabel>09 — Conclusión</SectionLabel>
+        <SectionLabel>14 — Conclusión</SectionLabel>
         <blockquote className="font-serif italic text-3xl lg:text-5xl leading-tight max-w-4xl text-foreground">
           "El problema no es lo que produce Misiones, sino cómo lo organiza. Este sistema convierte <span className="text-gradient-hero not-italic font-display font-semibold">organización en desarrollo económico.</span>"
         </blockquote>
@@ -501,6 +741,11 @@ function Index() {
       <Financiamiento />
       <Sectores />
       <Plataforma />
+      <RedProductiva />
+      <Almacenamiento />
+      <Subproductos />
+      <CapacidadOciosa />
+      <ICVT />
       <Internacional />
       <Conclusion />
       <Footer />
