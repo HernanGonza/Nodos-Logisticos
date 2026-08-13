@@ -579,9 +579,9 @@ function CapacidadOciosa() {
 
 function ICVT() {
   const ejemplos = [
-    { v: "25%", t: "IVAP bajo", d: "Bajo valor agregado provincial." },
-    { v: "60%", t: "IVAP medio", d: "Buen nivel de captura de valor." },
-    { v: "85%", t: "IVAP alto", d: "Altísimo impacto económico local." },
+    { v: "25%", t: "ICVT bajo", d: "Bajo valor agregado provincial." },
+    { v: "60%", t: "ICVT medio", d: "Buen nivel de captura de valor." },
+    { v: "85%", t: "ICVT alto", d: "Altísimo impacto económico local." },
   ];
   const dimensiones = ["Valor agregado local", "Empleo local", "Proveedores locales", "Servicios locales", "Logística local", "Transformación en Misiones", "Uso de infraestructura provincial", "Innovación local"];
   return (
