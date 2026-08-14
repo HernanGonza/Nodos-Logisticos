@@ -14,6 +14,7 @@ function Nav() {
           <span className="font-display font-semibold tracking-tight">Nodos Misiones</span>
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
+          <a href="#contexto" className="hover:text-foreground transition">Contexto</a>
           <a href="#diagnostico" className="hover:text-foreground transition">Diagnóstico</a>
           <a href="#modelo" className="hover:text-foreground transition">Modelo</a>
           <a href="#impacto" className="hover:text-foreground transition">Impacto</a>
@@ -75,6 +76,56 @@ function Hero() {
             </div>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+function Contexto() {
+  const stats = [
+    { v: "30.633", l: "Empresas cerradas en el país (dic. 2023 – may. 2026)" },
+    { v: "-17,05%", l: "Caída acumulada de transporte y almacenamiento a nivel país" },
+    { v: "814", l: "Empresas menos en Misiones en el último año" },
+    { v: "2da", l: "Provincia con mayor contracción empresarial del país" },
+  ];
+  return (
+    <section id="contexto" className="py-28 lg:py-36 border-t border-border">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <SectionLabel>00 — Por qué esto no puede esperar</SectionLabel>
+        <h2 className="font-display text-4xl lg:text-6xl font-semibold leading-[1.05] max-w-4xl">
+          El transporte y el almacenamiento se cierran <span className="font-serif italic font-light text-[var(--clay)]">más rápido que ningún otro sector.</span>
+        </h2>
+        <p className="mt-8 max-w-2xl text-lg text-muted-foreground leading-relaxed">
+          Entre diciembre de 2023 y mayo de 2026 cerraron <span className="text-foreground font-medium">30.633 empresas</span> en todo el país —el 6% del total—, según el Monitor mensual de empresas de Fundar, elaborado con datos de la Superintendencia de Riesgos del Trabajo (SRT). Ningún sector retrocedió más que <span className="text-foreground font-medium">transporte y almacenamiento</span>, con una caída acumulada del 17,05%.
+        </p>
+        <p className="mt-5 max-w-2xl text-lg text-muted-foreground leading-relaxed">
+          Misiones no es una excepción: es una de las provincias más golpeadas. En el último año perdió <span className="text-foreground font-medium">814 empresas</span> (-8,9% interanual, la mayor contracción registrada), y acumula una caída del 11,7% desde noviembre de 2023 —la segunda del país, detrás de La Rioja—. Dentro de la provincia, transporte y almacenamiento cae un 9%, en línea con el derrumbe nacional del sector.
+        </p>
+
+        <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-px bg-border rounded-2xl overflow-hidden border border-border shadow-sm">
+          {stats.map((s) => (
+            <div key={s.l} className="bg-card p-6 lg:p-8">
+              <div className="font-display font-bold text-gradient-hero text-3xl lg:text-4xl">{s.v}</div>
+              <div className="mt-2 text-xs lg:text-sm text-muted-foreground">{s.l}</div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 rounded-2xl border-l-4 border-[var(--clay)] bg-[var(--clay)]/5 p-7">
+          <p className="font-serif italic text-xl lg:text-2xl text-foreground leading-snug">
+            "8.367 empresas empleadoras privadas: el nivel más bajo de la serie en Misiones, tras 11 meses consecutivos de retroceso."
+          </p>
+          <p className="mt-3 text-sm text-muted-foreground">Monitor mensual de empresas, Fundar (en base a datos de la SRT), mayo de 2026.</p>
+        </div>
+
+        <p className="mt-12 max-w-3xl text-muted-foreground leading-relaxed">
+          El costo logístico explica gran parte de esa presión: el 40% del costo de exportación de los productos del NEA se va en el flete hasta el puerto de Buenos Aires, y trasladar una tonelada de yerba mate desde Misiones hasta allí —1.200 km— cuesta hoy cerca de $87.620.
+          <span className="text-foreground font-medium"> No es un dato aislado: es la evidencia de que el modelo logístico fragmentado ya no es sostenible</span>, y que coordinarlo —sin gasto público adicional— es hoy una urgencia económica, no una mejora incremental.
+        </p>
+
+        <p className="mt-8 text-xs text-muted-foreground/70">
+          Fuentes: Fundar, Monitor mensual de empresas (en base a datos de la SRT) · Infobae (14/08/2026) · Misiones Inversiones.
+        </p>
       </div>
     </section>
   );
@@ -735,6 +786,7 @@ function Index() {
     <main className="bg-background text-foreground">
       <Nav />
       <Hero />
+      <Contexto />
       <Diagnostico />
       <Solucion />
       <Modelo />
