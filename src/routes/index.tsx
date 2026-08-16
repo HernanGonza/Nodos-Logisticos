@@ -96,7 +96,7 @@ function Contexto() {
           El transporte y el almacenamiento se cierran <span className="font-serif italic font-light text-[var(--clay)]">más rápido que ningún otro sector.</span>
         </h2>
         <p className="mt-8 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-          Entre diciembre de 2023 y mayo de 2026 cerraron <span className="text-foreground font-medium">30.633 empresas</span> en todo el país —el 6% del total—, según el Monitor mensual de empresas de Fundar, elaborado con datos de la Superintendencia de Riesgos del Trabajo (SRT). Ningún sector retrocedió más que <span className="text-foreground font-medium">transporte y almacenamiento</span>, con una caída acumulada del 17,05%.
+          Entre diciembre de 2023 y mayo de 2026 cerraron <span className="text-foreground font-medium">30.633 empresas</span> en todo el país —el 6% del total—, la peor caída registrada en los primeros 30 meses de cualquier gestión, según el Monitor mensual de empresas de Fundar, elaborado con datos de la Superintendencia de Riesgos del Trabajo (SRT). Ningún sector retrocedió más que <span className="text-foreground font-medium">transporte y almacenamiento</span>, con una caída acumulada del 17,05% — ya son 16 meses consecutivos de baja mensual y 27 de caída interanual ininterrumpida.
         </p>
         <p className="mt-5 max-w-2xl text-lg text-muted-foreground leading-relaxed">
           Misiones no es una excepción: es una de las provincias más golpeadas. En el último año perdió <span className="text-foreground font-medium">814 empresas</span> (-8,9% interanual, la mayor contracción registrada), y acumula una caída del 11,7% desde noviembre de 2023 —la segunda del país, detrás de La Rioja—. Dentro de la provincia, transporte y almacenamiento cae un 9%, en línea con el derrumbe nacional del sector.
@@ -123,8 +123,14 @@ function Contexto() {
           <span className="text-foreground font-medium"> No es un dato aislado: es la evidencia de que el modelo logístico fragmentado ya no es sostenible</span>, y que coordinarlo —sin gasto público adicional— es hoy una urgencia económica, no una mejora incremental.
         </p>
 
+        <div className="mt-12 rounded-2xl border-l-4 border-[var(--gold-deep)] bg-[var(--gold)]/5 p-7">
+          <p className="text-foreground leading-relaxed">
+            <span className="font-medium">La respuesta ya está en la agenda pública nacional.</span> Mientras el sector se contrae, la Provincia de Buenos Aires —que concentra el 35,7% del PBI nacional y el 50,2% del valor agregado de la industria manufacturera del país— redobla la apuesta por coordinar el transporte en lugar de expandirlo: en agosto de 2026, su Ministerio de Transporte planteó públicamente que <span className="font-serif italic">"la multimodalidad es necesaria para poder bajar los costos logísticos"</span>, impulsando una estrategia basada en nodos logísticos, última milla y articulación entre camión, tren, puertos y vías fluviales. Si la jurisdicción de mayor escala productiva del país prioriza este modelo, Misiones tiene la oportunidad de anticiparse con una implementación más simple y de menor escala de coordinación.
+          </p>
+        </div>
+
         <p className="mt-8 text-xs text-muted-foreground/70">
-          Fuentes: Fundar, Monitor mensual de empresas (en base a datos de la SRT) · Infobae (14/08/2026) · Misiones Inversiones.
+          Fuentes: Fundar, Monitor mensual de empresas (en base a datos de la SRT) · Infobae, "Cerraron más de 30.000 empresas en todo el país en los últimos dos años y medio" (14/08/2026) · Infobae, "Buenos Aires pone el foco en la multimodalidad para bajar costos logísticos" (14/08/2026) · Misiones Inversiones.
         </p>
       </div>
     </section>
