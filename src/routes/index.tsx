@@ -135,6 +135,38 @@ function Contexto() {
           <span className="text-foreground font-medium"> La vía fluvial es el eslabón que completa la multimodalidad; la carga consolidada que la hace viable es la que organiza la Red de Nodos.</span>
         </p>
 
+        <div className="mt-12 rounded-2xl border-l-4 border-[var(--clay)] bg-[var(--clay)]/5 p-7 lg:p-9">
+          <p className="font-serif italic text-xl lg:text-2xl text-foreground leading-snug">
+            El cabotaje se decide a nivel nacional. Cómo se organiza la carga de Misiones, no.
+          </p>
+          <p className="mt-5 max-w-3xl text-foreground leading-relaxed">
+            La reforma de la Ley de Cabotaje depende del Congreso de la Nación y su calendario no lo define la Provincia. Esperar esa decisión es depender de una resolución externa para bajar costos. La Red de Nodos Logísticos cambia el planteo: la Provincia no legisla el cabotaje, pero sí puede organizar todo lo necesario para aprovecharlo —y para no quedar frenada mientras tanto.
+          </p>
+          <ul className="mt-8 divide-y divide-[var(--clay)]/20 border-y border-[var(--clay)]/20">
+            <li className="flex items-start gap-5 py-5">
+              <span className="font-serif text-3xl text-[var(--gold-deep)] leading-none w-10 shrink-0">01</span>
+              <p className="text-muted-foreground leading-relaxed">
+                <span className="text-foreground font-medium">Escala para usar el río.</span> Una barcaza solo se justifica con carga consolidada, y ninguna pyme la completa sola. Los nodos agregan carga por destino y volumen, y le dan a la Provincia masa crítica para negociar con operadores fluviales cuando el marco lo permita.
+              </p>
+            </li>
+            <li className="flex items-start gap-5 py-5">
+              <span className="font-serif text-3xl text-[var(--gold-deep)] leading-none w-10 shrink-0">02</span>
+              <p className="text-muted-foreground leading-relaxed">
+                <span className="text-foreground font-medium">Ahorro sin esperar la ley.</span> Consolidación de carga, retornos optimizados y menos intermediarios reducen costos hoy, por ruta. El nodo no depende de un modo de transporte: hoy articula camión; mañana puede articular camión y barcaza.
+              </p>
+            </li>
+            <li className="flex items-start gap-5 py-5">
+              <span className="font-serif text-3xl text-[var(--gold-deep)] leading-none w-10 shrink-0">03</span>
+              <p className="text-muted-foreground leading-relaxed">
+                <span className="text-foreground font-medium">Datos propios para el debate.</span> La plataforma registra volúmenes, costos y flujos reales de la cadena provincial. Misiones llega a la discusión nacional con evidencia propia, no con estimaciones de terceros.
+              </p>
+            </li>
+          </ul>
+          <p className="mt-8 max-w-3xl text-foreground leading-relaxed">
+            Esa es la diferencia entre esperar una decisión y estar preparada para ella. Una provincia que coordina su propia logística y administra sus propios datos depende menos de lo que se resuelva en otro lugar: eso es, en concreto, <span className="font-medium">soberanía económica</span>.
+          </p>
+        </div>
+
         <p className="mt-8 text-xs text-muted-foreground/70">
           Fuentes: Fundar, Monitor mensual de empresas (en base a datos de la SRT) · Infobae, "Cerraron más de 30.000 empresas en todo el país en los últimos dos años y medio" (14/08/2026) · Infobae, "Buenos Aires pone el foco en la multimodalidad para bajar costos logísticos" (14/08/2026) · Misiones Cuatro, "Ley de Cabotaje: una reforma que Misiones necesita" (nota de opinión, 19/09/2026) · Misiones Inversiones.
         </p>
