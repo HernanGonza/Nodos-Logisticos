@@ -125,12 +125,18 @@ function Contexto() {
 
         <div className="mt-12 rounded-2xl border-l-4 border-[var(--gold-deep)] bg-[var(--gold)]/5 p-7">
           <p className="text-foreground leading-relaxed">
-            <span className="font-medium">La respuesta ya está en la agenda pública nacional.</span> Mientras el sector se contrae, la Provincia de Buenos Aires —que concentra el 35,7% del PBI nacional y el 50,2% del valor agregado de la industria manufacturera del país— redobla la apuesta por coordinar el transporte en lugar de expandirlo: en agosto de 2026, su Ministerio de Transporte planteó públicamente que <span className="font-serif italic">"la multimodalidad es necesaria para poder bajar los costos logísticos"</span>, impulsando una estrategia basada en nodos logísticos, última milla y articulación entre camión, tren, puertos y vías fluviales. Si la jurisdicción de mayor escala productiva del país prioriza este modelo, Misiones tiene la oportunidad de anticiparse con una implementación más simple y de menor escala de coordinación.
+            <span className="font-medium">La respuesta ya está en la agenda pública nacional.</span> Mientras el sector se contrae, la Provincia de Buenos Aires —que concentra el 35,7% del PBI nacional y el 50,2% del valor agregado de la industria manufacturera del país— redobla la apuesta por coordinar el transporte en lugar de expandirlo: en agosto de 2026, su Ministerio de Transporte planteó públicamente que <span className="font-serif italic">"la multimodalidad es necesaria para poder bajar los costos logísticos"</span>, impulsando una estrategia basada en nodos logísticos, última milla y articulación entre camión, tren, puertos y vías fluviales.
+            Si la jurisdicción de mayor escala productiva del país prioriza este modelo, Misiones tiene la oportunidad de anticiparse con una implementación más simple y de menor escala de coordinación.
           </p>
         </div>
 
+        <p className="mt-8 max-w-3xl text-muted-foreground leading-relaxed">
+          En Misiones, además, la discusión sobre la reforma de la Ley de Cabotaje pone el foco en el río. Según una nota de opinión de Misiones Cuatro, hoy despachar un contenedor desde Eldorado hasta un buque oceánico cuesta unos <span className="text-foreground font-medium">USD 3.600</span>, y con una operatoria fluvial competitiva podría bajar a unos <span className="text-foreground font-medium">USD 2.500</span> —USD 1.100 menos por contenedor—. Un convoy de barcazas puede reemplazar hasta 1.600 camiones pesados, con un consumo energético entre tres y cinco veces más eficiente, y descongestionar las rutas 12 y 14.
+          <span className="text-foreground font-medium"> La vía fluvial es el eslabón que completa la multimodalidad; la carga consolidada que la hace viable es la que organiza la Red de Nodos.</span>
+        </p>
+
         <p className="mt-8 text-xs text-muted-foreground/70">
-          Fuentes: Fundar, Monitor mensual de empresas (en base a datos de la SRT) · Infobae, "Cerraron más de 30.000 empresas en todo el país en los últimos dos años y medio" (14/08/2026) · Infobae, "Buenos Aires pone el foco en la multimodalidad para bajar costos logísticos" (14/08/2026) · Misiones Inversiones.
+          Fuentes: Fundar, Monitor mensual de empresas (en base a datos de la SRT) · Infobae, "Cerraron más de 30.000 empresas en todo el país en los últimos dos años y medio" (14/08/2026) · Infobae, "Buenos Aires pone el foco en la multimodalidad para bajar costos logísticos" (14/08/2026) · Misiones Cuatro, "Ley de Cabotaje: una reforma que Misiones necesita" (nota de opinión, 19/09/2026) · Misiones Inversiones.
         </p>
       </div>
     </section>
