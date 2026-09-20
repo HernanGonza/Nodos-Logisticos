@@ -285,6 +285,10 @@ function Modelo() {
         <p className="mt-10 max-w-3xl text-muted-foreground">
           Este modelo transforma los parques industriales en <span className="text-foreground font-medium">centros operativos activos</span>, con municipios como gestores del nodo, el sector privado como ejecutor del transporte, y la provincia como coordinador general del sistema y administrador directo de la plataforma digital que lo integra.
         </p>
+
+        <p className="mt-6 max-w-3xl text-muted-foreground">
+          La apertura de nuevos modos de transporte no desplaza al transportista: lo reordena. Aun con un río más competitivo, la carga tiene que llegar al puerto y salir de él. <span className="text-foreground font-medium">El nodo convierte al camión en alimentador de la cadena</span> —primera y última milla— en lugar de dejarlo compitiendo contra ella, con cargas completas y retornos optimizados.
+        </p>
       </div>
     </section>
   );
@@ -719,6 +723,11 @@ function ICVT() {
             </p>
           </div>
         </div>
+
+        <p className="mt-10 max-w-3xl text-muted-foreground leading-relaxed">
+          El índice cobra sentido cuando cambian las reglas del transporte. Quien sea que opere el río —flota nacional, regional o extranjera—, el flete es un solo eslabón de la cadena: la consolidación de carga, el almacenamiento, la gestión documental, los servicios y los datos pueden quedarse en la provincia.
+          <span className="text-foreground font-medium"> No importa solo quién mueve la carga, sino cuánto valor queda en Misiones</span>, y el ICVT permite medirlo.
+        </p>
       </div>
     </section>
   );
@@ -758,6 +767,14 @@ function Internacional() {
             Unidad ejecutora provincial · aval institucional · indicadores de impacto medibles · sostenibilidad financiera demostrada · trazabilidad digital del sistema.
           </p>
         </div>
+
+        <p className="mt-8 max-w-3xl text-muted-foreground leading-relaxed">
+          La logística fluvial del Litoral ya atrae financiamiento multilateral: el 15 de septiembre de 2026 el BCIE aprobó hasta USD 34 millones para la primera etapa del Puerto de Lavalle, en Corrientes, con un muelle para barcazas y buques fluviales sobre el Paraná.
+          <span className="text-foreground font-medium"> Un puerto necesita carga que lo use</span>: la infraestructura física y la organización del sistema se complementan, y la Red de Nodos aporta la segunda.
+        </p>
+        <p className="mt-4 text-xs text-muted-foreground/70">
+          Fuente: BCIE, comunicado del 15/09/2026 (Proyecto Puerto de Lavalle).
+        </p>
       </div>
     </section>
   );
@@ -795,6 +812,9 @@ function Conclusion() {
             </h3>
             <p className="mt-6 text-lg text-primary-foreground/80 leading-relaxed">
               No proponemos un aumento del gasto público. Proponemos transformar las ineficiencias logísticas existentes en un sistema económico organizado — con reglas claras, incentivos alineados y tecnología como soporte.
+            </p>
+            <p className="mt-5 text-lg text-primary-foreground/80 leading-relaxed">
+              Las reglas nacionales del transporte se discuten, se modifican y a veces se demoran. Una capa provincial de coordinación —con sus propias reglas, su plataforma y sus datos— le da a la logística de Misiones una continuidad que no depende de cuál sea el marco vigente.
             </p>
             <p className="mt-5 text-lg text-primary-foreground/80 leading-relaxed">
               En el fondo, este programa responde a una idea más amplia: la <span className="text-[var(--gold)] font-semibold">soberanía económica de Misiones</span>. Una provincia que coordina su propia logística, administra sus propios datos productivos y capta más valor de lo que produce, depende menos de decisiones y transferencias externas para sostener su desarrollo. La Red de Nodos Logísticos no es solo una mejora operativa — es la infraestructura que le permite a Misiones decidir sobre su propio futuro económico.
