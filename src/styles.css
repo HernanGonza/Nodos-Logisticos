@@ -95,6 +95,8 @@
 @layer base {
   * { border-color: var(--color-border); }
   html { scroll-behavior: smooth; }
+  /* Deja lugar a la barra fija (nav global + barra de anclas) al saltar a una sección. */
+  [id] { scroll-margin-top: 7rem; }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);

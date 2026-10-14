@@ -9,8 +9,32 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as NodosLogisticosRouteImport } from './routes/nodos-logisticos'
+import { Route as IntegracionFronterizaRouteImport } from './routes/integracion-fronteriza'
+import { Route as FondoEstabilidadRouteImport } from './routes/fondo-estabilidad'
+import { Route as CapturaDeValorRouteImport } from './routes/captura-de-valor'
 import { Route as IndexRouteImport } from './routes/index'
 
+const NodosLogisticosRoute = NodosLogisticosRouteImport.update({
+  id: '/nodos-logisticos',
+  path: '/nodos-logisticos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IntegracionFronterizaRoute = IntegracionFronterizaRouteImport.update({
+  id: '/integracion-fronteriza',
+  path: '/integracion-fronteriza',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FondoEstabilidadRoute = FondoEstabilidadRouteImport.update({
+  id: '/fondo-estabilidad',
+  path: '/fondo-estabilidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CapturaDeValorRoute = CapturaDeValorRouteImport.update({
+  id: '/captura-de-valor',
+  path: '/captura-de-valor',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +43,88 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/captura-de-valor': typeof CapturaDeValorRoute
+  '/fondo-estabilidad': typeof FondoEstabilidadRoute
+  '/integracion-fronteriza': typeof IntegracionFronterizaRoute
+  '/nodos-logisticos': typeof NodosLogisticosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/captura-de-valor': typeof CapturaDeValorRoute
+  '/fondo-estabilidad': typeof FondoEstabilidadRoute
+  '/integracion-fronteriza': typeof IntegracionFronterizaRoute
+  '/nodos-logisticos': typeof NodosLogisticosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/captura-de-valor': typeof CapturaDeValorRoute
+  '/fondo-estabilidad': typeof FondoEstabilidadRoute
+  '/integracion-fronteriza': typeof IntegracionFronterizaRoute
+  '/nodos-logisticos': typeof NodosLogisticosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/captura-de-valor'
+    | '/fondo-estabilidad'
+    | '/integracion-fronteriza'
+    | '/nodos-logisticos'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/captura-de-valor'
+    | '/fondo-estabilidad'
+    | '/integracion-fronteriza'
+    | '/nodos-logisticos'
+  id:
+    | '__root__'
+    | '/'
+    | '/captura-de-valor'
+    | '/fondo-estabilidad'
+    | '/integracion-fronteriza'
+    | '/nodos-logisticos'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CapturaDeValorRoute: typeof CapturaDeValorRoute
+  FondoEstabilidadRoute: typeof FondoEstabilidadRoute
+  IntegracionFronterizaRoute: typeof IntegracionFronterizaRoute
+  NodosLogisticosRoute: typeof NodosLogisticosRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/nodos-logisticos': {
+      id: '/nodos-logisticos'
+      path: '/nodos-logisticos'
+      fullPath: '/nodos-logisticos'
+      preLoaderRoute: typeof NodosLogisticosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/integracion-fronteriza': {
+      id: '/integracion-fronteriza'
+      path: '/integracion-fronteriza'
+      fullPath: '/integracion-fronteriza'
+      preLoaderRoute: typeof IntegracionFronterizaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fondo-estabilidad': {
+      id: '/fondo-estabilidad'
+      path: '/fondo-estabilidad'
+      fullPath: '/fondo-estabilidad'
+      preLoaderRoute: typeof FondoEstabilidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/captura-de-valor': {
+      id: '/captura-de-valor'
+      path: '/captura-de-valor'
+      fullPath: '/captura-de-valor'
+      preLoaderRoute: typeof CapturaDeValorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +137,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CapturaDeValorRoute: CapturaDeValorRoute,
+  FondoEstabilidadRoute: FondoEstabilidadRoute,
+  IntegracionFronterizaRoute: IntegracionFronterizaRoute,
+  NodosLogisticosRoute: NodosLogisticosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

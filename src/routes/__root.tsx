@@ -46,12 +46,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Red de Nodos Logísticos de Misiones — Programa Provincial" },
-      { name: "description", content: "Sistema integrado de eficiencia productiva, logística y exportación para la provincia de Misiones. Reducción de costos logísticos del 25% al 45%." },
-      { property: "og:title", content: "Red de Nodos Logísticos de Misiones" },
-      { property: "og:description", content: "Programa provincial de transformación logística y productiva." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:locale", content: "es_AR" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
