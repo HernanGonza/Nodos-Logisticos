@@ -9,25 +9,15 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as NodosLogisticosRouteImport } from './routes/nodos-logisticos'
-import { Route as IntegracionFronterizaRouteImport } from './routes/integracion-fronteriza'
-import { Route as FondoEstabilidadRouteImport } from './routes/fondo-estabilidad'
-import { Route as CapturaDeValorRouteImport } from './routes/captura-de-valor'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CapturaDeValorRouteImport } from './routes/captura-de-valor'
+import { Route as FondoEstabilidadRouteImport } from './routes/fondo-estabilidad'
+import { Route as IntegracionFronterizaRouteImport } from './routes/integracion-fronteriza'
+import { Route as NodosLogisticosRouteImport } from './routes/nodos-logisticos'
 
-const NodosLogisticosRoute = NodosLogisticosRouteImport.update({
-  id: '/nodos-logisticos',
-  path: '/nodos-logisticos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IntegracionFronterizaRoute = IntegracionFronterizaRouteImport.update({
-  id: '/integracion-fronteriza',
-  path: '/integracion-fronteriza',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FondoEstabilidadRoute = FondoEstabilidadRouteImport.update({
-  id: '/fondo-estabilidad',
-  path: '/fondo-estabilidad',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CapturaDeValorRoute = CapturaDeValorRouteImport.update({
@@ -35,9 +25,19 @@ const CapturaDeValorRoute = CapturaDeValorRouteImport.update({
   path: '/captura-de-valor',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const FondoEstabilidadRoute = FondoEstabilidadRouteImport.update({
+  id: '/fondo-estabilidad',
+  path: '/fondo-estabilidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IntegracionFronterizaRoute = IntegracionFronterizaRouteImport.update({
+  id: '/integracion-fronteriza',
+  path: '/integracion-fronteriza',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NodosLogisticosRoute = NodosLogisticosRouteImport.update({
+  id: '/nodos-logisticos',
+  path: '/nodos-logisticos',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -97,25 +97,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/nodos-logisticos': {
-      id: '/nodos-logisticos'
-      path: '/nodos-logisticos'
-      fullPath: '/nodos-logisticos'
-      preLoaderRoute: typeof NodosLogisticosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/integracion-fronteriza': {
-      id: '/integracion-fronteriza'
-      path: '/integracion-fronteriza'
-      fullPath: '/integracion-fronteriza'
-      preLoaderRoute: typeof IntegracionFronterizaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/fondo-estabilidad': {
-      id: '/fondo-estabilidad'
-      path: '/fondo-estabilidad'
-      fullPath: '/fondo-estabilidad'
-      preLoaderRoute: typeof FondoEstabilidadRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/captura-de-valor': {
@@ -125,11 +111,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CapturaDeValorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/fondo-estabilidad': {
+      id: '/fondo-estabilidad'
+      path: '/fondo-estabilidad'
+      fullPath: '/fondo-estabilidad'
+      preLoaderRoute: typeof FondoEstabilidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/integracion-fronteriza': {
+      id: '/integracion-fronteriza'
+      path: '/integracion-fronteriza'
+      fullPath: '/integracion-fronteriza'
+      preLoaderRoute: typeof IntegracionFronterizaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nodos-logisticos': {
+      id: '/nodos-logisticos'
+      path: '/nodos-logisticos'
+      fullPath: '/nodos-logisticos'
+      preLoaderRoute: typeof NodosLogisticosRouteImport
       parentRoute: typeof rootRouteImport
     }
   }

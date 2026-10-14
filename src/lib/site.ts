@@ -1,6 +1,8 @@
 import { Gauge, Globe2, Landmark, Truck, type LucideIcon } from "lucide-react";
 
 export const SITE_URL = "https://soberania.tacuara.com.ar";
+export const ORG_NAME = "Tacuara";
+export const ORG_URL = "https://www.tacuara.com.ar";
 export const SITE_NAME = "Soberanía Económica · Misiones";
 export const SITE_TITLE = "Soberanía Económica de Misiones";
 export const DOC_VERSION = "Documento de propuesta v1.0 · 2026";
@@ -70,6 +72,8 @@ export function pageHead({ title, description, path }: HeadInput) {
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: `${SITE_TITLE} · ${ORG_NAME}` },
+      { name: "author", content: ORG_NAME },
       { property: "og:url", content: url },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },

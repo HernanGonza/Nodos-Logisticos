@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { PROJECTS, SITE_NAME } from "@/lib/site";
+import { ORG_NAME, PROJECTS, SITE_TITLE } from "@/lib/site";
+import { TacuaraBrand } from "./TacuaraBrand";
 
 export type NavSection = { href: string; label: string };
 
@@ -19,9 +20,8 @@ export function SiteNav({ sections = [] }: { sections?: NavSection[] }) {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/85 border-b border-border/40">
       <div className="mx-auto max-w-7xl px-6 lg:px-10 h-16 flex items-center justify-between gap-4">
-        <Link to="/" onClick={close} className="flex items-center gap-2.5 min-w-0">
-          <div className="h-8 w-8 shrink-0 rounded-lg bg-primary grid place-items-center text-primary-foreground font-display font-bold">S</div>
-          <span className="font-display font-semibold tracking-tight truncate">{SITE_NAME}</span>
+        <Link to="/" onClick={close} aria-label={`${ORG_NAME} — ${SITE_TITLE}, inicio`}>
+          <TacuaraBrand />
         </Link>
 
         <nav className="hidden xl:flex items-center gap-7 text-sm text-muted-foreground" aria-label="Proyectos">

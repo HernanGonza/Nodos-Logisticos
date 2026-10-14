@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { DOC_VERSION, PROJECTS, SITE_TITLE } from "@/lib/site";
+import { TacuaraBrand } from "./TacuaraBrand";
+import { DOC_VERSION, ORG_URL, PROJECTS, SITE_TITLE } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -8,6 +9,10 @@ export function Footer() {
         <div>
           <div className="font-display font-semibold">{SITE_TITLE}</div>
           <div className="text-sm text-muted-foreground mt-1">Programa Provincial · {DOC_VERSION}</div>
+          <div className="mt-6 text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground">Un proyecto de</div>
+          <a href={ORG_URL} target="_blank" rel="noopener noreferrer" aria-label="Tacuara (se abre en una pestaña nueva)" className="mt-3 inline-flex hover:opacity-80 transition">
+            <TacuaraBrand />
+          </a>
           <div className="text-xs text-muted-foreground mt-6">© {new Date().getFullYear()} Provincia de Misiones · Argentina</div>
         </div>
         <nav aria-label="Proyectos del programa">
