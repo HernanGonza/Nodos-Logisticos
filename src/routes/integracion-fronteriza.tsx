@@ -52,7 +52,7 @@ function IntegracionFronteriza() {
         badge="Programa provincial · Frontera · Comercio regional"
         title={
           <>
-            Programa de Integración <span className="text-gradient-hero italic font-serif font-light">Productiva</span> Fronteriza.
+            Programa de Integración <span className="hl">Productiva</span> Fronteriza.
           </>
         }
         lead="Hacer con la frontera lo que la Red de Nodos hace con la carga: ordenar la información, conectar a quienes producen con quienes compran y medir lo que se logra."
@@ -67,7 +67,7 @@ function IntegracionFronteriza() {
       <ContentSection
         id="por-que-ahora"
         label="00 — Por qué ahora"
-        title={<>Una frontera extensa, <span className="font-serif italic font-light text-[var(--clay)]">poco aprovechada para producir.</span></>}
+        title={<>Una frontera extensa, <span className="hl">poco aprovechada para producir.</span></>}
       >
         <Lead>
           Misiones tiene casi toda su frontera con Brasil y Paraguay, pero hoy la usa sobre todo para consumo y tránsito. Hay muchos convenios, encuentros y agendas, pero dispersos y sin métricas.
@@ -85,7 +85,7 @@ function IntegracionFronteriza() {
         />
       </ContentSection>
 
-      <ContentSection id="diagnostico" alt label="01 — Diagnóstico" title={<>Tres brechas <span className="font-serif italic font-light">entre la agenda y el comercio.</span></>}>
+      <ContentSection id="diagnostico" alt label="01 — Diagnóstico" title={<>Tres brechas <span className="hl">entre la agenda y el comercio.</span></>}>
         <CardGrid
           items={[
             { t: "Agenda protocolar sin seguimiento", d: "Los acuerdos y encuentros no se traducen en acciones comprobables ni tienen indicadores de resultado." },
@@ -95,7 +95,7 @@ function IntegracionFronteriza() {
         />
       </ContentSection>
 
-      <ContentSection id="solucion" label="02 — Solución" title={<>La lógica de Nodos, <span className="font-serif italic font-light">aplicada a la frontera.</span></>}>
+      <ContentSection id="solucion" label="02 — Solución" title={<>La lógica de Nodos, <span className="hl">aplicada a la frontera.</span></>}>
         <Lead>
           Un esquema que organiza la cooperación productiva en lugar de sumar más estructura: <Em>la Provincia coordina; las empresas y los municipios ejecutan.</Em>
         </Lead>
@@ -109,12 +109,12 @@ function IntegracionFronteriza() {
         />
       </ContentSection>
 
-      <ContentSection id="corredores" alt label="03 — Corredores" title={<>Tres corredores, <span className="font-serif italic font-light">cada uno con sus indicadores.</span></>}>
+      <ContentSection id="corredores" alt label="03 — Corredores" title={<>Tres corredores, <span className="hl">cada uno con sus indicadores.</span></>}>
         <div className="mt-16 grid md:grid-cols-3 gap-5">
           {CORREDORES.map((c) => (
-            <div key={c.t} className="rounded-3xl border border-border bg-card p-8">
+            <div key={c.t} className="rounded-lg border border-border bg-card p-8">
               <MapPin className="h-6 w-6 text-[var(--leaf)]" />
-              <h3 className="mt-6 font-display text-xl font-semibold leading-snug">{c.t}</h3>
+              <h3 className="mt-6 font-sans text-xl font-semibold leading-snug">{c.t}</h3>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{c.d}</p>
             </div>
           ))}
@@ -124,7 +124,7 @@ function IntegracionFronteriza() {
         </P>
       </ContentSection>
 
-      <ContentSection id="cadenas" label="04 — Cadenas con potencial binacional" title={<>Dónde puede haber <span className="font-serif italic font-light">complementariedad.</span></>}>
+      <ContentSection id="cadenas" label="04 — Cadenas con potencial binacional" title={<>Dónde puede haber <span className="hl">complementariedad.</span></>}>
         <div className="mt-12 flex flex-wrap gap-2">
           {CADENAS.map((c) => (
             <Tag key={c}>{c}</Tag>
@@ -133,7 +133,7 @@ function IntegracionFronteriza() {
         <Note>Potencial a validar con relevamiento · sin cifras en esta etapa</Note>
       </ContentSection>
 
-      <ContentSection id="modelo" alt label="05 — Modelo operativo" title={<>Cuatro actores <span className="font-serif italic font-light">a cada lado de la frontera.</span></>}>
+      <ContentSection id="modelo" alt label="05 — Modelo operativo" title={<>Cuatro actores <span className="hl">a cada lado de la frontera.</span></>}>
         <ActorChain
           items={[
             { icon: MapPin, t: "Los municipios fronterizos", d: "Operan como nodos de frontera, con presencia local." },
@@ -144,7 +144,7 @@ function IntegracionFronteriza() {
         />
       </ContentSection>
 
-      <ContentSection id="limites" label="06 — Límites claros" title={<>Lo que este proyecto <span className="font-serif italic font-light">no hace.</span></>}>
+      <ContentSection id="limites" label="06 — Límites claros" title={<>Lo que este proyecto <span className="hl">no hace.</span></>}>
         <Lead>
           La aduana, las migraciones y el comercio exterior son competencia nacional. El proyecto no crea zonas aduaneras ni modifica aranceles: organiza la cooperación productiva dentro de las competencias provinciales.
         </Lead>
@@ -158,7 +158,7 @@ function IntegracionFronteriza() {
         />
       </ContentSection>
 
-      <ContentSection id="financiamiento" alt label="07 — Financiamiento" title={<>Sin estructura <span className="font-serif italic font-light">burocrática fija.</span></>}>
+      <ContentSection id="financiamiento" alt label="07 — Financiamiento" title={<>Sin estructura <span className="hl">burocrática fija.</span></>}>
         <Lead>El financiamiento sigue la lógica del Registro de Almacenamiento de la Red de Nodos.</Lead>
         <CheckList
           items={[
@@ -169,7 +169,7 @@ function IntegracionFronteriza() {
         />
       </ContentSection>
 
-      <ContentSection id="indicadores" label="08 — Indicadores" title={<>Qué se mide <span className="font-serif italic font-light">para saber si funciona.</span></>}>
+      <ContentSection id="indicadores" label="08 — Indicadores" title={<>Qué se mide <span className="hl">para saber si funciona.</span></>}>
         <ModuleGrid
           cols="sm:grid-cols-2 lg:grid-cols-5"
           items={[
@@ -182,17 +182,17 @@ function IntegracionFronteriza() {
         />
       </ContentSection>
 
-      <ContentSection id="relacion" alt label="09 — Relación con los otros proyectos" title={<>El mercado <span className="font-serif italic font-light">para lo que Misiones organiza.</span></>}>
+      <ContentSection id="relacion" alt label="09 — Relación con los otros proyectos" title={<>El mercado <span className="hl">para lo que Misiones organiza.</span></>}>
         <P className="mt-8">
           Los municipios fronterizos funcionan como <Em>nodos</Em> de la red. Lo que se transforma en la provincia, medido por la <Em>Captura de Valor</Em>, encuentra mercado del otro lado. Y el <Em>Fondo de Estabilidad</Em> puede cofinanciar la infraestructura de los corredores.
         </P>
       </ContentSection>
 
-      <section id="conclusion" className="py-28 lg:py-36 border-t border-border bg-grain">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <section id="conclusion" className="py-24 lg:py-28 border-t border-dashed border-border bg-secondary">
+        <div className="mx-auto w-[min(1180px,calc(100%-48px))]">
           <div className="text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground mb-6">Conclusión</div>
-          <blockquote className="font-serif italic text-2xl lg:text-4xl leading-tight max-w-4xl text-foreground">
-            "Una frontera que produce información, contratos y datos propios deja de ser solo un lugar de paso. Abrir mercados con reglas claras es parte de la <span className="not-italic font-display font-semibold text-gradient-hero">soberanía económica de Misiones.</span>"
+          <blockquote className="font-bold tracking-tight text-2xl lg:text-4xl leading-tight max-w-4xl text-foreground">
+            "Una frontera que produce información, contratos y datos propios deja de ser solo un lugar de paso. Abrir mercados con reglas claras es parte de la <span className="not-italic font-sans font-semibold hl">soberanía económica de Misiones.</span>"
           </blockquote>
         </div>
       </section>

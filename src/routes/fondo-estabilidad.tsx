@@ -44,7 +44,7 @@ function FondoEstabilidad() {
         title={
           <>
             Fondo Misionero de<br />
-            <span className="text-gradient-hero italic font-serif font-light">Estabilidad</span> e Infraestructura.
+            <span className="hl">Estabilidad</span> e Infraestructura.
           </>
         }
         lead="Un fondo propio, con reglas automáticas y blindaje institucional, que ahorra cuando la recaudación acompaña y sostiene la obra pública productiva cuando cae."
@@ -59,7 +59,7 @@ function FondoEstabilidad() {
       <ContentSection
         id="por-que-ahora"
         label="00 — Por qué ahora"
-        title={<>Cada crisis frena las obras <span className="font-serif italic font-light text-[var(--clay)]">a la mitad.</span></>}
+        title={<>Cada crisis frena las obras <span className="hl">a la mitad.</span></>}
       >
         <Lead>
           La recaudación provincial y las transferencias nacionales son volátiles. Cuando caen, las obras que estaban en marcha se frenan antes de terminarse y la Provincia queda empujada a endeudarse en las peores condiciones.
@@ -72,7 +72,7 @@ function FondoEstabilidad() {
         </Quote>
       </ContentSection>
 
-      <ContentSection id="diagnostico" alt label="01 — Diagnóstico" title={<>Tres debilidades <span className="font-serif italic font-light">estructurales.</span></>}>
+      <ContentSection id="diagnostico" alt label="01 — Diagnóstico" title={<>Tres debilidades <span className="hl">estructurales.</span></>}>
         <CardGrid
           items={[
             { t: "No hay un colchón propio", d: "Los años de mayores ingresos no generan reservas. Al llegar la caída, la Provincia no tiene con qué sostener el gasto productivo." },
@@ -82,24 +82,24 @@ function FondoEstabilidad() {
         />
       </ContentSection>
 
-      <ContentSection id="solucion" label="02 — Solución" title={<>Un fondo con <span className="font-serif italic font-light">dos cuentas.</span></>}>
+      <ContentSection id="solucion" label="02 — Solución" title={<>Un fondo con <span className="hl">dos cuentas.</span></>}>
         <Lead>Una sola institución, dos funciones separadas, cada una con su propia regla.</Lead>
         <div className="mt-16 grid lg:grid-cols-2 gap-6">
-          <div className="rounded-3xl border border-border bg-card p-8 lg:p-10">
+          <div className="rounded-lg border border-border bg-card p-8 lg:p-10">
             <div className="flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-[var(--gold-deep)]">
               <Wallet className="h-3.5 w-3.5" /> Cuenta 1
             </div>
-            <h3 className="mt-5 font-display text-2xl font-semibold">Reserva anticíclica</h3>
+            <h3 className="mt-5 font-sans text-2xl font-semibold">Reserva anticíclica</h3>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               Se activa solo con una regla objetiva, no por decisión discrecional. Por ejemplo, una caída real interanual de los recursos, o una emergencia declarada por la Legislatura.
             </p>
             <Note>El umbral exacto de activación es un parámetro a definir</Note>
           </div>
-          <div className="rounded-3xl border border-border bg-card p-8 lg:p-10">
+          <div className="rounded-lg border border-border bg-card p-8 lg:p-10">
             <div className="flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-[var(--gold-deep)]">
               <Layers className="h-3.5 w-3.5" /> Cuenta 2
             </div>
-            <h3 className="mt-5 font-display text-2xl font-semibold">Ventana de infraestructura estratégica</h3>
+            <h3 className="mt-5 font-sans text-2xl font-semibold">Ventana de infraestructura estratégica</h3>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               Cofinancia obras productivas seleccionadas con criterios públicos y puntaje: infraestructura que habilita producción, logística y empleo, no gasto corriente.
             </p>
@@ -108,7 +108,7 @@ function FondoEstabilidad() {
         </div>
       </ContentSection>
 
-      <ContentSection id="modelo" alt label="03 — Modelo operativo" title={<>Cuatro actores, <span className="font-serif italic font-light">cada uno con su rol.</span></>}>
+      <ContentSection id="modelo" alt label="03 — Modelo operativo" title={<>Cuatro actores, <span className="hl">cada uno con su rol.</span></>}>
         <ActorChain
           items={[
             { icon: Landmark, t: "La Provincia aporta", d: "Según una regla automática, no según la voluntad de cada presupuesto." },
@@ -119,7 +119,7 @@ function FondoEstabilidad() {
         />
       </ContentSection>
 
-      <ContentSection id="reglas" label="04 — Reglas de acumulación y uso" title={<>Cuándo se ahorra, <span className="font-serif italic font-light">cuándo se usa.</span></>}>
+      <ContentSection id="reglas" label="04 — Reglas de acumulación y uso" title={<>Cuándo se ahorra, <span className="hl">cuándo se usa.</span></>}>
         <Lead>Esquema de funcionamiento. Los parámetros se fijan en la etapa de diseño normativo y no se incluyen cifras en este documento.</Lead>
         <ModuleGrid
           items={[
@@ -132,7 +132,7 @@ function FondoEstabilidad() {
         <Note>Esquema ilustrativo · parámetros a validar</Note>
       </ContentSection>
 
-      <ContentSection id="blindaje" alt label="05 — Blindaje" title={<>El diseño central <span className="font-serif italic font-light">es la protección.</span></>}>
+      <ContentSection id="blindaje" alt label="05 — Blindaje" title={<>El diseño central <span className="hl">es la protección.</span></>}>
         <Lead>Un fondo vale lo que valen sus reglas de uso. Estas son las que lo protegen de las urgencias de cada gestión.</Lead>
         <CheckList
           items={[
@@ -145,7 +145,7 @@ function FondoEstabilidad() {
         />
       </ContentSection>
 
-      <ContentSection id="neuquen" label="06 — Lección de Neuquén" title={<>Un fondo anticíclico que <span className="font-serif italic font-light">se abrió demasiado pronto.</span></>}>
+      <ContentSection id="neuquen" label="06 — Lección de Neuquén" title={<>Un fondo anticíclico que <span className="hl">se abrió demasiado pronto.</span></>}>
         <Lead>
           El Fondo de Estabilización y Desarrollo de Neuquén (FEDEN) se creó como fideicomiso en 2020, con un subfondo anticíclico del 20%. Entró en vigencia en 2022 y ahorró solo un año y medio antes de que una nueva ley habilitara usarlo para el déficit previsional y el pago de deuda.
         </Lead>
@@ -164,7 +164,7 @@ function FondoEstabilidad() {
         />
       </ContentSection>
 
-      <ContentSection id="financiamiento" alt label="07 — Financiamiento" title={<>Se financia sin aumentar <span className="font-serif italic font-light">el gasto público.</span></>}>
+      <ContentSection id="financiamiento" alt label="07 — Financiamiento" title={<>Se financia sin aumentar <span className="hl">el gasto público.</span></>}>
         <Lead>Las fuentes son recursos que hoy no se resguardan o no se aprovechan.</Lead>
         <CheckList
           items={[
@@ -177,17 +177,17 @@ function FondoEstabilidad() {
         />
       </ContentSection>
 
-      <ContentSection id="relacion" label="08 — Relación con los otros proyectos" title={<>La base financiera <span className="font-serif italic font-light">del programa.</span></>}>
+      <ContentSection id="relacion" label="08 — Relación con los otros proyectos" title={<>La base financiera <span className="hl">del programa.</span></>}>
         <P className="mt-8">
           El Fondo <Em>financia infraestructura para nodos y parques industriales</Em> a través de la ventana estratégica, y <Em>sostiene los programas en las crisis</Em> a través de la reserva anticíclica, de modo que la Red de Nodos, la Captura de Valor y la Integración Fronteriza no se interrumpan cuando caen los ingresos.
         </P>
       </ContentSection>
 
-      <section id="conclusion" className="py-28 lg:py-36 border-t border-border bg-grain">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <section id="conclusion" className="py-24 lg:py-28 border-t border-dashed border-border bg-secondary">
+        <div className="mx-auto w-[min(1180px,calc(100%-48px))]">
           <div className="text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground mb-6">Conclusión</div>
-          <blockquote className="font-serif italic text-2xl lg:text-4xl leading-tight max-w-4xl text-foreground">
-            "Una provincia con reserva propia y reglas que la protegen no depende de la coyuntura externa para terminar lo que empezó. Esa continuidad es parte de la <span className="not-italic font-display font-semibold text-gradient-hero">soberanía económica de Misiones.</span>"
+          <blockquote className="font-bold tracking-tight text-2xl lg:text-4xl leading-tight max-w-4xl text-foreground">
+            "Una provincia con reserva propia y reglas que la protegen no depende de la coyuntura externa para terminar lo que empezó. Esa continuidad es parte de la <span className="not-italic font-sans font-semibold hl">soberanía económica de Misiones.</span>"
           </blockquote>
         </div>
       </section>

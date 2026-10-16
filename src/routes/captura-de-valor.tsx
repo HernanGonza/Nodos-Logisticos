@@ -84,7 +84,7 @@ function CapturaDeValor() {
         badge="Programa provincial · Industrialización · Política de promoción"
         title={
           <>
-            Programa de <span className="text-gradient-hero italic font-serif font-light">Captura de Valor</span> Territorial.
+            Programa de <span className="hl">Captura de Valor</span> Territorial.
           </>
         }
         lead="Una regla objetiva y medible para decidir a quién se premia: los beneficios provinciales se asignan según cuánto valor de lo que se produce queda realmente en Misiones."
@@ -99,7 +99,7 @@ function CapturaDeValor() {
       <ContentSection
         id="por-que-ahora"
         label="00 — Por qué ahora"
-        title={<>Misiones produce mucho. <span className="font-serif italic font-light text-[var(--clay)]">El valor se agrega afuera.</span></>}
+        title={<>Misiones produce mucho. <span className="hl">El valor se agrega afuera.</span></>}
       >
         <Lead>
           Gran parte del valor de lo que produce la provincia se agrega fuera de ella: en el procesamiento, la industrialización, la marca y la comercialización.
@@ -107,7 +107,7 @@ function CapturaDeValor() {
         </Lead>
       </ContentSection>
 
-      <ContentSection id="diagnostico" alt label="01 — Diagnóstico" title={<>Tres rasgos de <span className="font-serif italic font-light">la situación actual.</span></>}>
+      <ContentSection id="diagnostico" alt label="01 — Diagnóstico" title={<>Tres rasgos de <span className="hl">la situación actual.</span></>}>
         <CardGrid
           items={[
             { t: "Venta de materia prima con bajo procesamiento", d: "Se exporta o se despacha fuera de la provincia lo que podría transformarse localmente." },
@@ -117,7 +117,7 @@ function CapturaDeValor() {
         />
       </ContentSection>
 
-      <ContentSection id="solucion" label="02 — Solución" title={<>Una regla común: el <span className="font-serif italic font-light">ICVT.</span></>}>
+      <ContentSection id="solucion" label="02 — Solución" title={<>Una regla común: el <span className="hl">ICVT.</span></>}>
         <Lead>
           El Índice de Captura de Valor Territorial (ICVT) se mide a través de la <Link to="/nodos-logisticos" className="underline underline-offset-4 hover:text-[var(--clay)]">Red de Nodos Logísticos</Link> y es la regla para asignar todos los beneficios provinciales del programa.
         </Lead>
@@ -139,14 +139,14 @@ function CapturaDeValor() {
         <Note>Nodos mide el índice; este programa lo usa para asignar beneficios</Note>
       </ContentSection>
 
-      <ContentSection id="dimensiones" alt label="03 — Las dimensiones del índice" title={<>Qué se mide <span className="font-serif italic font-light">y cómo se distingue.</span></>}>
+      <ContentSection id="dimensiones" alt label="03 — Las dimensiones del índice" title={<>Qué se mide <span className="hl">y cómo se distingue.</span></>}>
         <div className="mt-12 flex flex-wrap gap-2">
           {DIMENSIONES.map((d) => (
             <Tag key={d}>{d}</Tag>
           ))}
         </div>
         <div className="mt-12 grid lg:grid-cols-2 gap-6">
-          <div className="rounded-2xl border border-border bg-card p-7">
+          <div className="rounded-lg border border-border bg-card p-7">
             <div className="text-xs font-medium tracking-widest uppercase text-muted-foreground">Valor agregado, facturación y origen</div>
             <ul className="mt-5 space-y-4 text-sm text-muted-foreground leading-relaxed">
               <li><Em>Valor agregado:</Em> lo que la empresa suma a los insumos que compra, descontados esos insumos.</li>
@@ -154,7 +154,7 @@ function CapturaDeValor() {
               <li><Em>Origen:</Em> dónde se obtuvo la materia prima o dónde está radicada la empresa. No equivale a valor agregado local.</li>
             </ul>
           </div>
-          <div className="rounded-2xl border border-border bg-card p-7">
+          <div className="rounded-lg border border-border bg-card p-7">
             <div className="text-xs font-medium tracking-widest uppercase text-muted-foreground">Datos administrativos y declaraciones auditables</div>
             <ul className="mt-5 space-y-4 text-sm text-muted-foreground leading-relaxed">
               <li><Em>Administrativos:</Em> información que la Provincia ya posee o puede cruzar, como registros laborales, impositivos y de habilitación.</li>
@@ -164,14 +164,14 @@ function CapturaDeValor() {
         </div>
       </ContentSection>
 
-      <ContentSection id="etapas" label="04 — Mapa de etapas faltantes por cadena" title={<>Qué se hace afuera <span className="font-serif italic font-light">y qué haría falta para traerlo.</span></>}>
+      <ContentSection id="etapas" label="04 — Mapa de etapas faltantes por cadena" title={<>Qué se hace afuera <span className="hl">y qué haría falta para traerlo.</span></>}>
         <Lead>Cuatro cadenas a relevar. Las preguntas son hipótesis de trabajo; no hay datos cargados en esta etapa.</Lead>
         <div className="mt-16 grid md:grid-cols-2 gap-5">
           {CADENAS.map((c) => (
-            <div key={c.t} className="rounded-3xl border border-border bg-card p-8">
+            <div key={c.t} className="rounded-lg border border-border bg-card p-8">
               <div className="flex items-center justify-between">
-                <h3 className="font-display text-2xl font-semibold">{c.t}</h3>
-                <span className="text-xs uppercase tracking-widest text-muted-foreground">A relevar</span>
+                <h3 className="font-sans text-2xl font-semibold">{c.t}</h3>
+                <span className="font-mono text-[0.74rem] uppercase tracking-[0.05em] text-muted-foreground">A relevar</span>
               </div>
               <ul className="mt-5 space-y-3 text-sm text-muted-foreground leading-relaxed">
                 {c.q.map((q) => (
@@ -186,7 +186,7 @@ function CapturaDeValor() {
         </div>
       </ContentSection>
 
-      <ContentSection id="modelo" alt label="05 — Modelo operativo" title={<>Quién declara, quién mide, <span className="font-serif italic font-light">quién verifica.</span></>}>
+      <ContentSection id="modelo" alt label="05 — Modelo operativo" title={<>Quién declara, quién mide, <span className="hl">quién verifica.</span></>}>
         <ActorChain
           items={[
             { icon: Building2, t: "Las empresas declaran", d: "Declaran sus datos y obtienen su índice." },
@@ -197,7 +197,7 @@ function CapturaDeValor() {
         />
       </ContentSection>
 
-      <ContentSection id="compromisos" label="06 — Compromisos y recupero" title={<>Beneficios con <span className="font-serif italic font-light">contrapartida.</span></>}>
+      <ContentSection id="compromisos" label="06 — Compromisos y recupero" title={<>Beneficios con <span className="hl">contrapartida.</span></>}>
         <CheckList
           items={[
             "Las metas son proporcionales al beneficio recibido.",
@@ -207,7 +207,7 @@ function CapturaDeValor() {
         />
       </ContentSection>
 
-      <ContentSection id="incentivos" alt label="07 — Incentivos por actor" title={<>Por qué cada actor <span className="font-serif italic font-light">participa.</span></>}>
+      <ContentSection id="incentivos" alt label="07 — Incentivos por actor" title={<>Por qué cada actor <span className="hl">participa.</span></>}>
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-5">
           {[
             { t: "Empresas", d: "Acceso a infraestructura, servicios, asistencia y cofinanciamiento con reglas conocidas de antemano." },
@@ -215,10 +215,10 @@ function CapturaDeValor() {
             { t: "Municipios", d: "Más actividad, empleo y proveedores radicados en su territorio, y un nodo con mayor uso." },
             { t: "Provincia", d: "Una política de promoción objetiva, datos propios sobre la cadena y más valor retenido." },
           ].map((a) => (
-            <div key={a.t} className="rounded-2xl border border-border bg-card p-7">
+            <div key={a.t} className="rounded-lg border border-border bg-card p-7">
               <div className="flex items-center gap-3">
                 <div className="h-2 w-2 rounded-full bg-[var(--gold-deep)]" />
-                <h3 className="font-display text-xl font-semibold">{a.t}</h3>
+                <h3 className="font-sans text-xl font-semibold">{a.t}</h3>
               </div>
               <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{a.d}</p>
             </div>
@@ -226,17 +226,17 @@ function CapturaDeValor() {
         </div>
       </ContentSection>
 
-      <ContentSection id="relacion" label="08 — Relación con los otros proyectos" title={<>La regla que <span className="font-serif italic font-light">ordena el programa.</span></>}>
+      <ContentSection id="relacion" label="08 — Relación con los otros proyectos" title={<>La regla que <span className="hl">ordena el programa.</span></>}>
         <P className="mt-8">
           <Em>Nodos</Em> produce los datos para medir el índice. El <Em>Fondo de Estabilidad</Em> puede financiar la infraestructura que el programa prioriza. <Em>Integración Fronteriza</Em> abre mercados para lo que se transforma en la provincia.
         </P>
       </ContentSection>
 
-      <section id="conclusion" className="py-28 lg:py-36 border-t border-border bg-grain">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <section id="conclusion" className="py-24 lg:py-28 border-t border-dashed border-border bg-secondary">
+        <div className="mx-auto w-[min(1180px,calc(100%-48px))]">
           <div className="text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground mb-6">Conclusión</div>
-          <blockquote className="font-serif italic text-2xl lg:text-4xl leading-tight max-w-4xl text-foreground">
-            "Cuando los beneficios se asignan por una regla medible, la provincia deja de negociar caso por caso y empieza a decidir qué valor quiere que quede en su territorio. Esa decisión es parte de la <span className="not-italic font-display font-semibold text-gradient-hero">soberanía económica de Misiones.</span>"
+          <blockquote className="font-bold tracking-tight text-2xl lg:text-4xl leading-tight max-w-4xl text-foreground">
+            "Cuando los beneficios se asignan por una regla medible, la provincia deja de negociar caso por caso y empieza a decidir qué valor quiere que quede en su territorio. Esa decisión es parte de la <span className="not-italic font-sans font-semibold hl">soberanía económica de Misiones.</span>"
           </blockquote>
           <SourcesBlock
             className="mt-12"

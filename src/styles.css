@@ -4,16 +4,20 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Tipografía de la marca Tacuara, usada solo en el brand de la barra superior. */
-@font-face {
-  font-family: "Inter Tight";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("/fonts/inter-tight-latin.woff2") format("woff2");
-}
+/* Fuentes de Tacuara, autoalojadas (subset latin). */
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 100 900; font-display: swap; src: url("/fonts/inter-tight-latin.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/ibm-plex-mono-400.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/ibm-plex-mono-500.woff2") format("woff2"); }
 
+/*
+ * Sistema visual Tacuara (igual que las otras propuestas): verde selva, verde tacuara,
+ * tierra colorada y beige bambú, con contraste AA, foco visible y objetivos táctiles de 44px.
+ */
 @theme inline {
+  --font-sans: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -43,62 +47,45 @@
   --color-gold: var(--gold);
   --color-clay: var(--clay);
   --color-leaf: var(--leaf);
-  --font-display: var(--font-display);
-  --font-serif: var(--font-serif);
-  --font-sans: var(--font-sans);
+  --color-earth: var(--earth);
+  --color-deep: var(--deep);
+  --color-deep-foreground: var(--deep-foreground);
 }
 
 :root {
-  --radius: 1rem;
+  --radius: 0.5rem;
+  --background: oklch(0.985 0.012 95);
+  --foreground: oklch(0.22 0.02 130);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.02 130);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.02 130);
+  --primary: oklch(0.386 0.107 135.9);
+  --primary-foreground: oklch(0.985 0.012 95);
+  --secondary: oklch(0.945 0.035 125);
+  --secondary-foreground: oklch(0.32 0.09 136);
+  --muted: oklch(0.958 0.02 100);
+  --muted-foreground: oklch(0.44 0.02 120);
+  --accent: oklch(0.78 0.17 130);
+  --accent-foreground: oklch(0.2 0.03 135);
+  --destructive: oklch(0.52 0.2 27);
+  --destructive-foreground: oklch(0.985 0.003 95);
+  --border: oklch(0.386 0.107 135.9 / 20%);
+  --input: oklch(0.4 0.04 130 / 55%);
+  --ring: oklch(0.5 0.14 133);
+  --earth: oklch(0.52 0.16 38);
+  --earth-soft: oklch(0.955 0.03 60);
+  --deep: oklch(0.2 0.035 135);
+  --deep-foreground: oklch(0.96 0.02 100);
+  --shadow-soft: 0 1px 0 oklch(0.386 0.107 135.9 / 10%), 0 12px 32px oklch(0.25 0.04 135 / 6%);
 
-  /* Warm earth background — sand/ochre tone, not cream-white */
-  --background: oklch(0.93 0.022 85);
-  --foreground: oklch(0.18 0.04 60);
-
-  --card: oklch(0.95 0.018 82);
-  --card-foreground: oklch(0.18 0.04 60);
-  --popover: oklch(0.95 0.018 82);
-  --popover-foreground: oklch(0.18 0.04 60);
-
-  /* Deep forest green — more saturated, earth-rooted */
-  --primary: oklch(0.28 0.09 145);
-  --primary-foreground: oklch(0.96 0.015 90);
-
-  --secondary: oklch(0.87 0.035 78);
-  --secondary-foreground: oklch(0.22 0.05 65);
-
-  --muted: oklch(0.84 0.035 75);
-  --muted-foreground: oklch(0.42 0.04 65);
-
-  /* Terracotta / burnt amber accent */
-  --accent: oklch(0.62 0.18 55);
-  --accent-foreground: oklch(0.18 0.04 60);
-
-  --destructive: oklch(0.52 0.20 30);
-  --destructive-foreground: oklch(0.96 0.015 90);
-
-  --border: oklch(0.80 0.04 70);
-  --input: oklch(0.80 0.04 70);
-  --ring: oklch(0.52 0.14 55);
-
-  /* Brand-specific — earth & forest palette */
-  --gold: oklch(0.70 0.17 65);
-  --gold-deep: oklch(0.58 0.18 50);
-  --clay: oklch(0.52 0.16 38);
-  --leaf: oklch(0.48 0.14 142);
-  --leaf-deep: oklch(0.26 0.09 145);
-  --terra: oklch(0.55 0.17 42);
-  --bark: oklch(0.38 0.09 62);
-  --ochre: oklch(0.65 0.16 70);
-
-  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
-  --font-serif: "Fraunces", Georgia, serif;
-  --font-sans: "Inter", system-ui, sans-serif;
-
-  --gradient-hero: linear-gradient(110deg, var(--gold-deep) 0%, var(--terra) 30%, var(--clay) 65%, var(--leaf) 100%);
-  --gradient-soft: radial-gradient(120% 90% at 80% 0%, oklch(0.78 0.14 55 / 0.45) 0%, transparent 55%),
-                   radial-gradient(80% 70% at 0% 0%, oklch(0.55 0.10 145 / 0.40) 0%, transparent 55%);
-  --shadow-elegant: 0 20px 60px -25px oklch(0.26 0.09 145 / 0.45);
+  /* Alias de la paleta anterior, para que las páginas existentes tomen los colores de Tacuara. */
+  --gold: var(--accent);
+  --gold-deep: var(--earth);
+  --clay: var(--earth);
+  --leaf: var(--primary);
+  --leaf-deep: var(--deep);
+  --shadow-elegant: var(--shadow-soft);
 }
 
 @layer base {
@@ -110,22 +97,40 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    font-feature-settings: "ss01", "cv11";
+    font-size: 1.0625rem;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4 {
-    font-family: var(--font-display);
-    letter-spacing: -0.025em;
-  }
+  h1, h2, h3, h4 { line-height: 1.12; letter-spacing: -0.02em; text-wrap: balance; }
+  p { text-wrap: pretty; }
+  :focus-visible { outline: 3px solid var(--ring); outline-offset: 3px; border-radius: 4px; }
+  button, [role="button"], a, summary, label[for], select { cursor: pointer; }
 }
 
-@utility text-gradient-hero {
-  background: var(--gradient-hero);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
+/* Etiqueta mono con cuadrado, para secciones y badges. */
+.eyebrow { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; display: flex; align-items: center; gap: 10px; margin-bottom: 18px; color: var(--earth); }
+.eyebrow::before { content: ""; width: 10px; height: 10px; background: currentColor; flex-shrink: 0; }
 
-@utility bg-grain {
-  background-image: var(--gradient-soft);
+/* Palabras destacadas con subrayado lima, como en el resto de las propuestas. */
+.hl { font-style: normal; font-weight: inherit; color: var(--primary); background: linear-gradient(transparent 64%, color-mix(in oklab, var(--accent) 55%, transparent) 64%); }
+.on-dark .hl, .bg-deep .hl { color: var(--deep-foreground); background: linear-gradient(transparent 64%, color-mix(in oklab, var(--accent) 45%, transparent) 64%); }
+
+/* Marco punteado con cuadrado terracota y círculo lima. */
+.grid-frame { position: relative; isolation: isolate; border: 1px dashed color-mix(in oklab, var(--foreground) 55%, transparent); background: color-mix(in oklab, var(--card) 55%, transparent); padding: 14px; }
+.grid-frame::before, .grid-frame::after { content: ""; position: absolute; pointer-events: none; }
+.grid-frame::before { right: -14px; top: -16px; width: 44px; height: 44px; border-radius: 50%; background: var(--accent); }
+.grid-frame::after { left: -14px; bottom: -14px; width: 52px; height: 52px; background: var(--earth); z-index: -1; }
+.grid-frame.alt::before { border-radius: 0; background: var(--earth); width: 36px; height: 36px; }
+.grid-frame.alt::after { border-radius: 50%; background: var(--accent); width: 48px; height: 48px; }
+@media (max-width: 760px) { .grid-frame { padding: 10px; } .grid-frame::before { right: -8px; } .grid-frame::after { left: -8px; } }
+
+.skip-link { position: absolute; left: 16px; top: -80px; z-index: 100; background: var(--primary); color: var(--primary-foreground); padding: 12px 18px; border-radius: 6px; font-weight: 700; transition: top 0.2s; }
+.skip-link:focus { top: 12px; }
+
+/* Footer */
+.footer-wordmark { font-weight: 800; text-transform: lowercase; text-align: center; font-size: clamp(5rem, 22vw, 20rem); line-height: 0.8; letter-spacing: -0.05em; color: color-mix(in oklab, var(--deep-foreground) 7%, transparent); margin-bottom: -3vw; user-select: none; pointer-events: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, ::before, ::after { animation: none !important; transition: none !important; }
 }

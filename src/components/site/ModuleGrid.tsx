@@ -22,26 +22,26 @@ export function ModuleGrid({
 }) {
   const lg = size === "lg";
   return (
-    <div className={`mt-16 grid ${cols} gap-px bg-border ${lg ? "rounded-3xl" : "rounded-3xl"} overflow-hidden border border-border`}>
-      {items.map((m, i) => (
-        <div key={m.t} className={`bg-card group ${lg ? "p-7 lg:p-9" : "p-7"}`}>
-          <div className="flex items-center justify-between">
-            <div
-              className={`${lg ? "h-12 w-12" : "h-11 w-11"} rounded-xl bg-primary/5 grid place-items-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition`}
-            >
-              <m.icon className="h-5 w-5" />
+    <div className="grid-frame alt mt-14">
+      <div className={`grid ${cols} gap-3.5`}>
+        {items.map((m, i) => (
+          <div key={m.t} className={`group rounded-lg border border-border bg-card shadow-[var(--shadow-soft)] transition hover:-translate-y-0.5 hover:border-primary/45 ${lg ? "p-7" : "p-6"}`}>
+            <div className="flex items-start justify-between">
+              <div className="grid h-12 w-12 place-items-center rounded-md bg-secondary text-primary">
+                <m.icon className="h-6 w-6" strokeWidth={1.7} />
+              </div>
+              <span className="font-mono text-sm text-muted-foreground">0{i + 1}</span>
             </div>
-            <span className={`font-serif text-[var(--gold-deep)] ${lg ? "text-3xl" : "text-2xl"}`}>0{i + 1}</span>
+            <h3 className={`font-bold leading-snug tracking-[-0.015em] ${lg ? "mt-7 text-lg" : "mt-6 text-base"}`}>{m.t}</h3>
+            <p className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">{m.d}</p>
+            {m.link && (
+              <Link to={m.link.to} className="mt-4 inline-flex text-sm font-semibold text-earth underline-offset-4 hover:underline">
+                {m.link.label}
+              </Link>
+            )}
           </div>
-          <h3 className={`font-display font-semibold ${lg ? "mt-8 text-lg" : "mt-6 text-base"}`}>{m.t}</h3>
-          <p className={`text-sm text-muted-foreground leading-relaxed ${lg ? "mt-3" : "mt-2"}`}>{m.d}</p>
-          {m.link && (
-            <Link to={m.link.to} className="mt-4 inline-flex text-sm font-medium text-[var(--clay)] hover:underline underline-offset-4">
-              {m.link.label}
-            </Link>
-          )}
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

@@ -37,7 +37,7 @@ function Home() {
         badge="Programa provincial · Documento de propuesta"
         title={
           <>
-            <span className="text-gradient-hero italic font-serif font-light">Soberanía</span> Económica<br />
+            <span className="hl">Soberanía</span> Económica<br />
             de Misiones.
           </>
         }
@@ -53,7 +53,7 @@ function Home() {
       <ContentSection
         id="valor"
         label="00 — Por dónde se va el valor"
-        title={<>Misiones produce valor. <span className="font-serif italic font-light text-[var(--clay)]">No siempre lo retiene.</span></>}
+        title={<>Misiones produce valor. <span className="hl">No siempre lo retiene.</span></>}
       >
         <Lead>
           Cuatro canales por los que el valor generado en la provincia se diluye fuera de ella.
@@ -95,7 +95,7 @@ function Home() {
         id="principios"
         alt
         label="01 — Principios comunes"
-        title={<>Cinco reglas que <span className="font-serif italic font-light">atraviesan todos los proyectos.</span></>}
+        title={<>Cinco reglas que <span className="hl">atraviesan todos los proyectos.</span></>}
       >
         <Lead>
           Los cuatro proyectos comparten el mismo diseño: se aprovecha lo que ya existe, se busca financiarlos sin aumentar el gasto público y se generan datos propios.
@@ -112,10 +112,10 @@ function Home() {
         />
       </ContentSection>
 
-      <section id="proyectos" className="py-28 lg:py-36 border-t border-border">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <section id="proyectos" className="py-24 lg:py-28 border-t border-dashed border-border">
+        <div className="mx-auto w-[min(1180px,calc(100%-48px))]">
           <SectionHeader label="02 — Los proyectos">
-            Cuatro proyectos, <span className="font-serif italic font-light">un mismo objetivo.</span>
+            Cuatro proyectos, <span className="hl">un mismo objetivo.</span>
           </SectionHeader>
           <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {PROJECTS.map((p) => (
@@ -132,7 +132,7 @@ function Home() {
         id="conexion"
         alt
         label="03 — Cómo se conectan"
-        title={<>Una operación, una regla, <span className="font-serif italic font-light">un mercado y un respaldo.</span></>}
+        title={<>Una operación, una regla, <span className="hl">un mercado y un respaldo.</span></>}
       >
         <Lead>Cada proyecto cumple una función distinta y se apoya en los otros tres.</Lead>
         <ActorChain
@@ -145,13 +145,13 @@ function Home() {
         />
         <Link
           to="/fondo-estabilidad"
-          className="mt-4 flex flex-col sm:flex-row sm:items-center gap-4 rounded-3xl bg-primary text-primary-foreground p-7 lg:p-9 hover:opacity-95 transition"
+          className="mt-4 flex flex-col sm:flex-row sm:items-center gap-4 rounded-lg bg-deep text-deep-foreground p-7 lg:p-9 hover:opacity-95 transition"
         >
-          <div className="h-12 w-12 shrink-0 rounded-xl bg-primary-foreground/10 grid place-items-center">
+          <div className="h-12 w-12 shrink-0 rounded-md bg-primary-foreground/10 grid place-items-center">
             <Landmark className="h-5 w-5" />
           </div>
           <div>
-            <div className="font-display text-lg font-semibold">El Fondo sostiene todo en la crisis</div>
+            <div className="font-sans text-lg font-semibold">El Fondo sostiene todo en la crisis</div>
             <p className="mt-1 text-sm text-primary-foreground/75 leading-relaxed">
               Una reserva propia financia la continuidad de las obras y de los tres programas cuando cae la recaudación o se recortan las transferencias.
             </p>
@@ -160,12 +160,12 @@ function Home() {
         </Link>
       </ContentSection>
 
-      <section id="cierre" className="py-28 lg:py-40 border-t border-border bg-grain">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <section id="cierre" className="py-24 lg:py-32 border-t border-dashed border-border bg-secondary">
+        <div className="mx-auto w-[min(1180px,calc(100%-48px))]">
           <SectionHeader label="04 — Cierre">
-            Una provincia que decide <span className="font-serif italic font-light text-[var(--clay)]">sobre su propio futuro económico.</span>
+            Una provincia que decide <span className="hl">sobre su propio futuro económico.</span>
           </SectionHeader>
-          <blockquote className="mt-10 font-serif italic text-2xl lg:text-4xl leading-tight max-w-4xl text-foreground">
+          <blockquote className="mt-10 italic text-2xl lg:text-4xl leading-tight max-w-4xl text-foreground">
             "Una provincia que coordina su logística, capta más valor de lo que produce, abre sus propios mercados y se resguarda de las crisis depende menos de decisiones externas para sostener su desarrollo."
           </blockquote>
           <P className="mt-8">

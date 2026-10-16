@@ -6,14 +6,14 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <Link
       to={project.to}
-      className="group flex flex-col rounded-3xl border border-border bg-card p-7 hover:shadow-[var(--shadow-elegant)] hover:border-primary transition"
+      className="group flex flex-col rounded-lg border border-border bg-card p-7 shadow-[var(--shadow-soft)] transition hover:-translate-y-0.5 hover:border-primary/45"
     >
-      <div className="h-12 w-12 rounded-xl bg-primary/5 grid place-items-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition">
-        <project.icon className="h-5 w-5" />
+      <div className="grid h-12 w-12 place-items-center rounded-md bg-secondary text-primary">
+        <project.icon className="h-6 w-6" strokeWidth={1.7} />
       </div>
-      <h3 className="mt-8 font-display text-xl font-semibold leading-snug">{project.name}</h3>
-      <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{project.summary}</p>
-      <span className="mt-auto pt-8 inline-flex items-center gap-1.5 text-sm font-medium text-[var(--clay)]">
+      <h3 className="mt-7 text-xl font-bold leading-snug tracking-[-0.015em]">{project.name}</h3>
+      <p className="mt-3 text-[0.95rem] leading-relaxed text-muted-foreground">{project.summary}</p>
+      <span className="mt-auto inline-flex items-center gap-1.5 pt-8 text-sm font-semibold text-earth">
         Ver el proyecto <ArrowUpRight className="h-4 w-4" />
       </span>
     </Link>

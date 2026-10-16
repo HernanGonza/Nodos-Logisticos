@@ -6,16 +6,16 @@ import { SectionHeader } from "./SectionHeader";
 export function OtherProjects({ current }: { current: ProjectPath }) {
   const others = PROJECTS.filter((p) => p.to !== current);
   return (
-    <section id="otros-proyectos" className="py-24 lg:py-32 border-t border-border bg-card/40">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+    <section id="otros-proyectos" className="py-24 lg:py-28 border-t border-dashed border-border bg-muted">
+      <div className="mx-auto w-[min(1180px,calc(100%-48px))]">
         <SectionHeader label="Soberanía Económica de Misiones">
-          Otros proyectos <span className="font-serif italic font-light">del programa.</span>
+          Otros proyectos <span className="hl">del programa.</span>
         </SectionHeader>
-        <div className="mt-12 grid md:grid-cols-3 gap-5">
+        <div className="grid-frame mt-14"><div className="grid gap-3.5 md:grid-cols-3">
           {others.map((p) => (
             <ProjectCard key={p.to} project={p} />
           ))}
-        </div>
+        </div></div>
       </div>
     </section>
   );

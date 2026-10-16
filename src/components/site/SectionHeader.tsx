@@ -2,9 +2,7 @@ import type { ReactNode } from "react";
 
 export function SectionLabel({ children }: { children: ReactNode }) {
   return (
-    <div className="text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground mb-6">
-      {children}
-    </div>
+    <div className="eyebrow">{children}</div>
   );
 }
 
@@ -21,9 +19,9 @@ export function SectionHeader({
   return (
     <>
       <SectionLabel>
-        {inverse ? <span className="text-primary-foreground/60">{label}</span> : label}
+        {inverse ? <span className="text-deep-foreground/60">{label}</span> : label}
       </SectionLabel>
-      <h2 className="font-display text-4xl lg:text-6xl font-semibold leading-[1.05] max-w-4xl break-words">
+      <h2 className="text-4xl lg:text-5xl font-extrabold leading-[1.08] tracking-[-0.035em] max-w-4xl break-words">
         {children}
       </h2>
     </>
@@ -45,8 +43,8 @@ export function ContentSection({
   children: ReactNode;
 }) {
   return (
-    <section id={id} className={`py-28 lg:py-36 border-t border-border ${alt ? "bg-card/40" : ""}`}>
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+    <section id={id} className={`py-24 lg:py-28 border-t border-dashed border-border ${alt ? "bg-muted" : ""}`}>
+      <div className="mx-auto w-[min(1180px,calc(100%-48px))]">
         <SectionHeader label={label}>{title}</SectionHeader>
         {children}
       </div>
